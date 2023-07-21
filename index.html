@@ -1,31 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-
     <!-- Metadata -->
-    <meta
-      name="description"
-      content="Amit Rambaran is a front-end developer experienced with creating websites for high traffic, customer facing businesses."
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="keywords"
-      content="Amit Rambaran, Web Development, Frontend, Backend, Graphic Design, Toronto, Branding, Website, Web Developer, Hire, Job"
+      content="Amit Rambaran, Frontend Developer, Web Development, Website Design, User Experience, High-Performance Websites, Customer-Facing Businesses, Toronto, Branding, Web Developer, Hire"
     />
     <meta name="author" content="Amit Rambaran" />
-    <meta property="og:title" content="Amit Rambaran" />
+    <meta
+      name="description"
+      content="Amit Rambaran is a seasoned front-end developer experienced with developing websites for high traffic, customer-facing businesses."
+    />
     <meta
       property="og:description"
-      content="Amit Rambaran is a front-end developer experienced with creating websites for high traffic, customer facing businesses. He also creates web apps in his spare time with HTML5/CSS3, JavaScript, jQuery, React.js, Node.js, RESTful APIs, AJAX, and much more."
+      content="Amit Rambaran is a seasoned front-end developer experienced with developing websites for high traffic, customer-facing businesses."
     />
-    <meta property="og:image" content="assets/meta.png" />
+    <meta
+      property="og:title"
+      content="Amit Rambaran - Frontend Developer Portfolio"
+    />
+    <meta
+      property="og:image"
+      content="https://amitrambaran.ca/assets/meta.png"
+    />
     <meta property="og:url" content="https://amitrambaran.ca" />
     <meta name="theme-color" content="#f3f3f3" />
+    <link rel="canonical" href="https://amitrambaran.ca" />
 
     <title>Amit Rambaran | Portfolio</title>
+
+    <link rel="shortcut icon" href="assets/favicon.png" />
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
     />
     <link
       rel="stylesheet"
@@ -38,15 +46,8 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css"
     />
-    <link rel="shortcut icon" href="assets/favicon.png" />
 
     <!-- font -->
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap"
@@ -144,11 +145,7 @@
               <div class="card bm--card-equal-height">
                 <div class="card-image">
                   <figure class="image is-4by3">
-                    <img
-                      src="assets/weatherme.jpg"
-                      alt="weatherme"
-                      loading="lazy"
-                    />
+                    <img src="assets/weatherme.jpg" alt="weatherme" />
                   </figure>
                 </div>
                 <div class="card-content">
@@ -156,8 +153,8 @@
                   <div class="content">
                     <p>
                       A dynamic, responsive weather app that utilizes the
-                      OpenWeatherMap API to display the current weather/five day
-                      forecast asynchronously.
+                      OpenWeatherMap API to asynchronously display the current
+                      weather/five day forecast.
                     </p>
                   </div>
                   <div class="tags">
@@ -204,11 +201,7 @@
               <div class="card bm--card-equal-height">
                 <div class="card-image">
                   <figure class="image is-4by3">
-                    <img
-                      src="assets/acme-locations.jpg"
-                      alt="havermap"
-                      loading="lazy"
-                    />
+                    <img src="assets/acme-locations.jpg" alt="havermap" />
                   </figure>
                 </div>
                 <div class="card-content">
@@ -216,7 +209,7 @@
                   <div class="content">
                     <p>
                       A React web app that pulls data from an external API and
-                      displays info on interactive and functional card
+                      displays info within interactive and functional card
                       components.
                     </p>
                   </div>
@@ -280,8 +273,8 @@
                   <p class="title has-text-centered">TrillaVibes</p>
                   <div class="content">
                     <p>
-                      A static website with custom CSS animations on an NginX
-                      instance deployed with Vultr.
+                      A static music production website with custom CSS
+                      animations deployed on an NginX instance via Vultr.
                     </p>
                   </div>
                   <div class="container tags">
@@ -341,7 +334,7 @@
                     <p>
                       An MSSQL database created with PHP for 600+ actively
                       manufactured automobile parts in order to reduce paint
-                      costs by 30% (Done during Magna Internship)
+                      costs by 30%.
                     </p>
                   </div>
                   <div class="container tags">
@@ -366,19 +359,13 @@
       </div>
     </footer>
     <script>
-      var footerContent = document.getElementById("my-footer");
-      var timeStamp = new Date().getFullYear();
-      footerContent.innerHTML +=
-        timeStamp + " Amit Rambaran. All Rights Reserved.";
-
-      (function () {
-        var burger = document.querySelector(".burger");
-        var nav = document.querySelector("#" + burger.dataset.target);
-        burger.addEventListener("click", function () {
-          burger.classList.toggle("is-active");
-          nav.classList.toggle("is-active");
-        });
-      })();
+      // Update footer content with the current year and name
+      const updateFooterContent = () => {
+        const footerContent = document.getElementById("my-footer");
+        const currentYear = new Date().getFullYear();
+        footerContent.innerHTML += `${currentYear} Amit Rambaran. All Rights Reserved.`;
+      };
+      updateFooterContent();
     </script>
   </body>
 </html>
