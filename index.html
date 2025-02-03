@@ -31,10 +31,7 @@
     <title>Amit Rambaran | Portfolio</title>
 
     <link rel="shortcut icon" href="assets/favicon.png" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
-    />
+    <script src="https://cdn.tailwindcss.com"></script>
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
@@ -46,6 +43,17 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css"
     />
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <style>
+      .cursor::after {
+        content: '|';
+        animation: cursor 1.1s infinite step-end;
+      }
+      @keyframes cursor {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0; }
+      }
+    </style>
 
     <!-- font -->
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -71,278 +79,267 @@
   </head>
 
   <body>
-    <nav class="navbar" aria-label="main navigation">
-      <div class="navbar-brand">
-        <div class="navbar-start light-purple">
-          <a href="#portfolio" class="navbar-item"> Portfolio </a>
-          <a
-            class="navbar-item"
-            href="assets/amit-rambaran-resume.pdf"
-            target="_blank"
-          >
-            Resume
-          </a>
+    <nav class="bg-white shadow-md fixed w-full z-50" aria-label="main navigation">
+      <div class="container mx-auto px-4">
+        <div class="flex items-center justify-center h-16">
+          <a href="#portfolio" class="text-[#EA580C] hover:text-[#C2410C] px-4 md:px-6 py-2 rounded-md text-base md:text-lg font-medium transition-colors duration-200">Portfolio</a>
+          <a href="assets/amit-rambaran-resume.pdf" target="_blank" class="text-[#EA580C] hover:text-[#C2410C] px-4 md:px-6 py-2 rounded-md text-base md:text-lg font-medium transition-colors duration-200">Resume</a>
         </div>
       </div>
     </nav>
 
-    <!--Me-->
-    <div class="section" id="header">
-      <div class="container column is-three-fifths is-centered">
-        <div class="content">
-          <p class="title is-1">
-            <span id="name">Amit Rambaran</span>
+    <div class="flex flex-col min-h-screen">
+      <!--Me-->
+      <div class="flex items-center justify-center min-h-screen bg-gray-50" id="header">
+        <div class="text-center px-4">
+          <h1 class="text-6xl md:text-6xl sm:text-5xl xs:text-4xl font-bold text-gray-800 mb-4">
+            <span id="typed-name"></span>
+          </h1>
+          <p class="text-xl md:text-xl sm:text-lg xs:text-base text-gray-600 mb-8 md:mb-12 h-16 md:h-20">
+            <span id="typed-description"></span>
           </p>
-          <p>
-            <span id="summary-text" class="title is-4"
-              >Front-end developer with a passion for clean and functional user
-              experiences.</span
-            >
-          </p>
-        </div>
-        <div class="content content__buttons">
-          <a
-            href="https://github.com/amitrambaran/"
-            target="_blank"
-            rel="noopener"
-            title="GitHub"
-            ><i class="fa-4x fab fa-github-square"></i><br />GitHub</a
-          >
-          <a
-            href="https://www.linkedin.com/in/amitrambaran/"
-            target="_blank"
-            rel="noopener"
-            title="LinkedIn"
-            ><i class="fa-4x fab fa-linkedin"></i><br />LinkedIn</a
-          >
-          <a
-            href="https://www.behance.net/amitrambaran"
-            target="_blank"
-            rel="noopener"
-            title="Behance"
-            ><i class="fa-4x fab fa-behance-square"></i><br />Designs</a
-          >
-          <a
-            href="mailto:amit.rambaran@gmail.com"
-            target="_blank"
-            rel="noopener"
-            title="Send an e-mail"
-            ><i class="fa-4x fas fa-envelope-square"></i><br />Mail</a
-          >
+          
+          <div class="flex flex-wrap justify-center items-center gap-8 md:gap-12">
+            <a href="https://github.com/amitrambaran" target="_blank" rel="noopener" class="text-[#EA580C] hover:text-[#C2410C] transition-colors duration-200">
+              <i class="fab fa-github text-4xl md:text-5xl"></i>
+              <div class="mt-2 text-sm md:text-base">GitHub</div>
+            </a>
+            <a href="https://www.linkedin.com/in/amit-rambaran" target="_blank" rel="noopener" class="text-[#EA580C] hover:text-[#C2410C] transition-colors duration-200">
+              <i class="fab fa-linkedin text-4xl md:text-5xl"></i>
+              <div class="mt-2 text-sm md:text-base">LinkedIn</div>
+            </a>
+            <a href="https://www.behance.net/amitrambaran" target="_blank" rel="noopener" class="text-[#EA580C] hover:text-[#C2410C] transition-colors duration-200">
+              <i class="fab fa-behance text-4xl md:text-5xl"></i>
+              <div class="mt-2 text-sm md:text-base">Designs</div>
+            </a>
+            <a href="mailto:amit.rambaran@gmail.com" target="_blank" rel="noopener" class="text-[#EA580C] hover:text-[#C2410C] transition-colors duration-200">
+              <i class="fas fa-envelope text-4xl md:text-5xl"></i>
+              <div class="mt-2 text-sm md:text-base">Mail</div>
+            </a>
+          </div>
         </div>
       </div>
-    </div>
 
-    <!--Portfolio-->
+      <!--Portfolio-->
 
-    <div class="section" id="portfolio">
-      <div class="container">
-        <div class="title is-2">Portfolio</div>
+      <div class="py-16" id="portfolio">
+        <div class="container mx-auto px-4">
+          <h2 class="text-4xl font-bold mb-8">Portfolio</h2>
 
-        <div class="container">
-          <div class="columns">
-            <div class="column is-one-half">
-              <div class="card bm--card-equal-height">
-                <div class="card-image">
-                  <figure class="image is-4by3">
-                    <img src="assets/weatherme.jpg" alt="weatherme" />
-                  </figure>
-                </div>
-                <div class="card-content">
-                  <p class="title has-text-centered">WeatherMe</p>
-                  <div class="content">
-                    <p>
-                      A dynamic, responsive weather app that utilizes the
-                      OpenWeatherMap API to asynchronously display the current
-                      weather/five day forecast.
-                    </p>
+          <div class="container mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div class="w-full">
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden h-full flex flex-col">
+                  <div class="relative pb-[75%]">
+                    <img src="assets/twedsa.png" alt="T Weds A" class="absolute inset-0 w-full h-full object-cover" />
                   </div>
-                  <div class="tags">
-                    <span class="tag is-dark">HTML</span>
-                    <span class="tag is-dark">CSS</span>
-                    <span class="tag is-dark">JavaScript</span>
-                    <span class="tag is-dark">AJAX</span>
-                    <span class="tag is-dark">JSON</span>
-                    <span class="tag is-dark">OpenWeatherMap API</span>
+                  <div class="p-6 flex-grow">
+                    <h3 class="text-2xl font-bold text-center mb-4">T Weds A</h3>
+                    <div class="mb-4">
+                      <p class="text-gray-700">
+                        A modern wedding website featuring RSVP management, event details, and photo gallery. Built with Next.js, offering a seamless experience for guests to interact and stay updated with wedding plans.
+                      </p>
+                    </div>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                      <span class="px-3 py-1 bg-gray-800 text-white rounded-full text-sm">Next.js</span>
+                      <span class="px-3 py-1 bg-gray-800 text-white rounded-full text-sm">JavaScript</span>
+                      <span class="px-3 py-1 bg-gray-800 text-white rounded-full text-sm">HTML/CSS</span>
+                    </div>
                   </div>
-                </div>
-                <div class="card-footer">
-                  <p class="card-footer-item">
+                  <div class="px-4 sm:px-6 py-4 bg-gray-50 flex flex-col sm:flex-row justify-center sm:justify-between gap-3 sm:gap-4">
                     <a
-                      href="https://github.com/amitrambaran/weather-app"
+                      href="https://triciawedsamit2025.ca"
                       target="_blank"
                       rel="noopener"
-                      class="button is-medium"
+                      class="inline-flex items-center justify-center px-3 sm:px-3 py-1.5 sm:py-1.5 bg-gray-800 text-white rounded hover:bg-gray-700 transition-colors text-sm"
                     >
-                      <span class="icon">
-                        <i class="fab fa-github"></i>
-                      </span>
-                      <span>GitHub</span>
+                      <span class="mr-2">Demo</span>
+                      <i class="fas fa-external-link-alt"></i>
                     </a>
-                  </p>
-                  <p class="card-footer-item">
+                    <a
+                      href="https://github.com/amitrambaran/twedsa"
+                      target="_blank"
+                      rel="noopener"
+                      class="inline-flex items-center justify-center px-3 sm:px-3 py-1.5 sm:py-1.5 bg-gray-800 text-white rounded hover:bg-gray-700 transition-colors text-sm"
+                    >
+                      <span class="mr-2">GitHub</span>
+                      <i class="fab fa-github"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="w-full">
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden h-full flex flex-col">
+                  <div class="relative pb-[75%]">
+                    <img src="assets/weatherme.jpg" alt="weatherme" class="absolute inset-0 w-full h-full object-cover" />
+                  </div>
+                  <div class="p-6 flex-grow">
+                    <h3 class="text-2xl font-bold text-center mb-4">WeatherMe</h3>
+                    <div class="mb-4">
+                      <p class="text-gray-700">
+                        A dynamic, responsive weather app that utilizes the
+                        OpenWeatherMap API to asynchronously display the current
+                        weather/five day forecast.
+                      </p>
+                    </div>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                      <span class="px-3 py-1 bg-gray-800 text-white rounded-full text-sm">HTML</span>
+                      <span class="px-3 py-1 bg-gray-800 text-white rounded-full text-sm">CSS</span>
+                      <span class="px-3 py-1 bg-gray-800 text-white rounded-full text-sm">JavaScript</span>
+                      <span class="px-3 py-1 bg-gray-800 text-white rounded-full text-sm">AJAX</span>
+                      <span class="px-3 py-1 bg-gray-800 text-white rounded-full text-sm">JSON</span>
+                      <span class="px-3 py-1 bg-gray-800 text-white rounded-full text-sm">OpenWeatherMap API</span>
+                    </div>
+                  </div>
+                  <div class="px-4 sm:px-6 py-4 bg-gray-50 flex flex-col sm:flex-row justify-center sm:justify-between gap-3 sm:gap-4">
                     <a
                       href="https://amitrambaran.ca/weather-app/"
                       target="_blank"
                       rel="noopener"
-                      class="button is-medium"
+                      class="inline-flex items-center justify-center px-3 sm:px-3 py-1.5 sm:py-1.5 bg-gray-800 text-white rounded hover:bg-gray-700 transition-colors text-sm"
                     >
-                      <span class="icon">
-                        <i class="fas fa-link"></i>
-                      </span>
-                      <span>Demo</span>
+                      <span class="mr-2">Demo</span>
+                      <i class="fas fa-external-link-alt"></i>
                     </a>
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div class="column is-one-half">
-              <div class="card bm--card-equal-height">
-                <div class="card-image">
-                  <figure class="image is-4by3">
-                    <img src="assets/acme-locations.jpg" alt="havermap" />
-                  </figure>
-                </div>
-                <div class="card-content">
-                  <p class="title has-text-centered">Acme Locations</p>
-                  <div class="content">
-                    <p>
-                      A React web app that pulls data from an external API and
-                      displays info within interactive and functional card
-                      components.
-                    </p>
-                  </div>
-                  <div class="tags">
-                    <span class="tag is-dark">HTML</span>
-                    <span class="tag is-dark">CSS</span>
-                    <span class="tag is-dark">JavaScript</span>
-                    <span class="tag is-dark">React</span>
-                    <span class="tag is-dark">Axios</span>
-                    <span class="tag is-dark">Moment</span>
-                    <span class="tag is-dark">Hooks</span>
-                    <span class="tag is-dark">Styled components</span>
-                    <span class="tag is-dark">JSON</span>
-                  </div>
-                </div>
-                <div class="card-footer">
-                  <p class="card-footer-item">
                     <a
-                      href="https://github.com/amitrambaran/acme-locations/"
+                      href="https://github.com/amitrambaran/weather-app"
                       target="_blank"
                       rel="noopener"
-                      class="button is-medium"
+                      class="inline-flex items-center justify-center px-3 sm:px-3 py-1.5 sm:py-1.5 bg-gray-800 text-white rounded hover:bg-gray-700 transition-colors text-sm"
                     >
-                      <span class="icon">
-                        <i class="fab fa-github"></i>
-                      </span>
-                      <span>GitHub</span>
+                      <span class="mr-2">GitHub</span>
+                      <i class="fab fa-github"></i>
                     </a>
-                  </p>
-                  <p class="card-footer-item">
+                  </div>
+                </div>
+              </div>
+
+              <div class="w-full">
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden h-full flex flex-col">
+                  <div class="relative pb-[75%]">
+                    <img src="assets/acme-locations.jpg" alt="havermap" class="absolute inset-0 w-full h-full object-cover" />
+                  </div>
+                  <div class="p-6 flex-grow">
+                    <h3 class="text-2xl font-bold text-center mb-4">Acme Locations</h3>
+                    <div class="mb-4">
+                      <p class="text-gray-700">
+                        A React web app that pulls data from an external API and
+                        displays info within interactive and functional card
+                        components.
+                      </p>
+                    </div>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                      <span class="px-3 py-1 bg-gray-800 text-white rounded-full text-sm">HTML</span>
+                      <span class="px-3 py-1 bg-gray-800 text-white rounded-full text-sm">CSS</span>
+                      <span class="px-3 py-1 bg-gray-800 text-white rounded-full text-sm">JavaScript</span>
+                      <span class="px-3 py-1 bg-gray-800 text-white rounded-full text-sm">React</span>
+                      <span class="px-3 py-1 bg-gray-800 text-white rounded-full text-sm">Axios</span>
+                      <span class="px-3 py-1 bg-gray-800 text-white rounded-full text-sm">Moment</span>
+                      <span class="px-3 py-1 bg-gray-800 text-white rounded-full text-sm">Hooks</span>
+                      <span class="px-3 py-1 bg-gray-800 text-white rounded-full text-sm">Styled components</span>
+                      <span class="px-3 py-1 bg-gray-800 text-white rounded-full text-sm">JSON</span>
+                    </div>
+                  </div>
+                  <div class="px-4 sm:px-6 py-4 bg-gray-50 flex flex-col sm:flex-row justify-center sm:justify-between gap-3 sm:gap-4">
                     <a
                       href="https://amitrambaran.ca/acme-locations/"
                       target="_blank"
                       rel="noopener"
-                      class="button is-medium"
+                      class="inline-flex items-center justify-center px-3 sm:px-3 py-1.5 sm:py-1.5 bg-gray-800 text-white rounded hover:bg-gray-700 transition-colors text-sm"
                     >
-                      <span class="icon">
-                        <i class="fas fa-link"></i>
-                      </span>
-                      <span>Demo</span>
+                      <span class="mr-2">Demo</span>
+                      <i class="fas fa-external-link-alt"></i>
                     </a>
-                  </p>
+                    <a
+                      href="https://github.com/amitrambaran/acme-locations"
+                      target="_blank"
+                      rel="noopener"
+                      class="inline-flex items-center justify-center px-3 sm:px-3 py-1.5 sm:py-1.5 bg-gray-800 text-white rounded hover:bg-gray-700 transition-colors text-sm"
+                    >
+                      <span class="mr-2">GitHub</span>
+                      <i class="fab fa-github"></i>
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
 
-          <div class="columns">
-            <div class="column is-one-half">
-              <div class="card bm--card-equal-height">
-                <div class="card-image">
-                  <figure class="image is-4by3">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
+              <div class="w-full">
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden h-full flex flex-col">
+                  <div class="relative pb-[75%]">
                     <img
                       src="assets/trillavibes.jpg"
                       alt="trillavibes"
-                      loading="lazy"
+                      class="absolute inset-0 w-full h-full object-cover"
                     />
-                  </figure>
-                </div>
-                <div class="card-content">
-                  <p class="title has-text-centered">TrillaVibes</p>
-                  <div class="content">
-                    <p>
-                      A static music production website with custom CSS
-                      animations deployed and hosted on an NginX instance.
-                    </p>
                   </div>
-                  <div class="container tags">
-                    <span class="tag is-dark">HTML</span>
-                    <span class="tag is-dark">CSS Keyframes</span>
-                    <span class="tag is-dark">JavaScript</span>
-                    <span class="tag is-dark">Vultr</span>
-                    <span class="tag is-dark">NginX</span>
-                    <span class="tag is-dark">CertBot</span>
+                  <div class="p-6 flex-grow">
+                    <h3 class="text-2xl font-bold text-center mb-4">TrillaVibes</h3>
+                    <div class="mb-4">
+                      <p class="text-gray-700">
+                        A static music production website with custom CSS
+                        animations deployed and hosted on an NginX instance.
+                      </p>
+                    </div>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                      <span class="px-3 py-1 bg-gray-800 text-white rounded-full text-sm">HTML</span>
+                      <span class="px-3 py-1 bg-gray-800 text-white rounded-full text-sm">CSS Keyframes</span>
+                      <span class="px-3 py-1 bg-gray-800 text-white rounded-full text-sm">JavaScript</span>
+                      <span class="px-3 py-1 bg-gray-800 text-white rounded-full text-sm">Vultr</span>
+                      <span class="px-3 py-1 bg-gray-800 text-white rounded-full text-sm">NginX</span>
+                      <span class="px-3 py-1 bg-gray-800 text-white rounded-full text-sm">CertBot</span>
+                    </div>
                   </div>
-                </div>
-                <div class="card-footer">
-                  <p class="card-footer-item">
+                  <div class="px-4 sm:px-6 py-4 bg-gray-50 flex flex-col sm:flex-row justify-center sm:justify-between gap-3 sm:gap-4">
+                    <a
+                      href="https://trillavibes.com"
+                      target="_blank"
+                      rel="noopener"
+                      class="inline-flex items-center justify-center px-3 sm:px-3 py-1.5 sm:py-1.5 bg-gray-800 text-white rounded hover:bg-gray-700 transition-colors text-sm"
+                    >
+                      <span class="mr-2">Demo</span>
+                      <i class="fas fa-external-link-alt"></i>
+                    </a>
                     <a
                       href="https://github.com/amitrambaran/trillavibes"
                       target="_blank"
                       rel="noopener"
-                      class="button is-medium"
+                      class="inline-flex items-center justify-center px-3 sm:px-3 py-1.5 sm:py-1.5 bg-gray-800 text-white rounded hover:bg-gray-700 transition-colors text-sm"
                     >
-                      <span class="icon">
-                        <i class="fab fa-github"></i>
-                      </span>
-                      <span>GitHub</span>
+                      <span class="mr-2">GitHub</span>
+                      <i class="fab fa-github"></i>
                     </a>
-                  </p>
-                  <p class="card-footer-item">
-                    <a
-                      href="https://amitrambaran.ca/trillavibes"
-                      target="_blank"
-                      rel="noopener"
-                      class="button is-medium"
-                    >
-                      <span class="icon">
-                        <i class="fas fa-link"></i>
-                      </span>
-                      <span>Site</span>
-                    </a>
-                  </p>
+                  </div>
                 </div>
               </div>
-            </div>
 
-            <div class="column is-one-half">
-              <div class="card bm--card-equal-height">
-                <div class="card-image">
-                  <figure class="image is-4by3">
+              <div class="w-full">
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden h-full flex flex-col">
+                  <div class="relative pb-[75%]">
                     <img
                       src="assets/database.jpg"
                       alt="part database"
-                      loading="lazy"
+                      class="absolute inset-0 w-full h-full object-cover"
                     />
-                  </figure>
-                </div>
-                <div class="card-content">
-                  <p class="title has-text-centered">Automotive Database</p>
-                  <div class="content">
-                    <p>
-                      A front-end dashboard hosted on an internal network for
-                      600+ actively manufactured automobile parts with
-                      respective surface area measurements. (NDA protected)
-                    </p>
                   </div>
-                  <div class="container tags">
-                    <span class="tag is-dark">HTML</span>
-                    <span class="tag is-dark">CSS</span>
-                    <span class="tag is-dark">PHP</span>
-                    <span class="tag is-dark">MSSQL</span>
-                    <span class="tag is-dark">Windows Server</span>
+                  <div class="p-6 flex-grow">
+                    <h3 class="text-2xl font-bold text-center mb-4">Automotive Database</h3>
+                    <div class="mb-4">
+                      <p class="text-gray-700">
+                        A front-end dashboard hosted on an internal network for
+                        600+ actively manufactured automobile parts with
+                        respective surface area measurements. (NDA protected)
+                      </p>
+                    </div>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                      <span class="px-3 py-1 bg-gray-800 text-white rounded-full text-sm">HTML</span>
+                      <span class="px-3 py-1 bg-gray-800 text-white rounded-full text-sm">CSS</span>
+                      <span class="px-3 py-1 bg-gray-800 text-white rounded-full text-sm">PHP</span>
+                      <span class="px-3 py-1 bg-gray-800 text-white rounded-full text-sm">MSSQL</span>
+                      <span class="px-3 py-1 bg-gray-800 text-white rounded-full text-sm">Windows Server</span>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -350,20 +347,38 @@
           </div>
         </div>
       </div>
-    </div>
 
-    <footer class="footer">
-      <div class="content has-text-centered" id="my-footer">
-        <strong>amit.rambaran@gmail.com</strong><br />
-        ©
-      </div>
-    </footer>
+      <footer class="bg-gray-100 py-8 mt-auto">
+        <div class="container mx-auto px-4 text-center">
+          <strong class="font-bold">amit.rambaran@gmail.com</strong><br />
+          <span class="text-gray-600">&copy; <span id="year"></span> Amit Rambaran</span>
+        </div>
+      </footer>
+    </div>
     <script>
-      // Update footer content with the current year and name
-      const updateFooterContent = () => {
-        const footerContent = document.getElementById("my-footer");
+      // Initialize Typed.js
+      document.addEventListener('DOMContentLoaded', function() {
+        // First type the name with colored letters
+        new Typed('#typed-name', {
+          strings: ['<span class="text-[#EA580C]">A</span>mit <span class="text-[#EA580C]">R</span>ambaran'],
+          typeSpeed: 40,
+          showCursor: true,
+          cursorChar: '|',
+          onComplete: function() {
+            // After name is typed, start typing the description
+            new Typed('#typed-description', {
+              strings: ['Front-end developer with a passion for clean^400\nand functional user experiences.'],
+              typeSpeed: 30,
+              showCursor: false
+            });
+          }
+        });
+      });
+
+      function updateFooterContent() {
+        const footerContent = document.getElementById("year");
         const currentYear = new Date().getFullYear();
-        footerContent.innerHTML += `${currentYear} Amit Rambaran. All Rights Reserved.`;
+        footerContent.innerHTML = currentYear;
       };
       updateFooterContent();
     </script>
