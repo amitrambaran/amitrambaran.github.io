@@ -41,11 +41,41 @@
     <link rel="stylesheet" href="css/app.css" />
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <style>
-      .cursor::after {
-        content: "|";
-        animation: cursor 1.1s infinite step-end;
+      /* Custom scrollbar styling to match orange theme */
+      ::-webkit-scrollbar {
+        width: 12px;
       }
-      @keyframes cursor {
+
+      ::-webkit-scrollbar-track {
+        background: #f1f1f1;
+        border-radius: 10px;
+      }
+
+      ::-webkit-scrollbar-thumb {
+        background: #ea580c;
+        border-radius: 10px;
+        border: 3px solid #f1f1f1;
+      }
+
+      ::-webkit-scrollbar-thumb:hover {
+        background: #c2410c;
+      }
+
+      /* Cursor animation - updated for stability */
+      .typed-cursor {
+        font-size: inherit;
+        line-height: inherit;
+        opacity: 1;
+        display: inline-block;
+        vertical-align: text-bottom;
+        margin-left: 2px;
+      }
+
+      .typed-cursor.typed-cursor--blink {
+        animation: typedCursorBlink 0.8s infinite;
+      }
+
+      @keyframes typedCursorBlink {
         0%,
         100% {
           opacity: 1;
@@ -58,7 +88,7 @@
 
     <!-- Google tag (gtag.js) -->
     <script
-      async
+      async=""
       src="https://www.googletagmanager.com/gtag/js?id=G-PLQCQCMT04"
     ></script>
     <script>
@@ -72,24 +102,32 @@
     </script>
   </head>
 
-  <body>
+  <body class="font-sans">
     <nav
-      class="bg-white border-b border-gray-100 fixed w-full z-50"
+      class="bg-white border-b border-gray-100 fixed w-full z-50 shadow-sm"
       aria-label="main navigation"
     >
       <div class="container mx-auto px-4">
         <div class="flex items-center justify-center h-16">
           <a
             href="#portfolio"
-            class="text-[#EA580C] hover:text-[#C2410C] px-4 md:px-6 py-2 rounded-md text-base md:text-lg font-medium transition-colors duration-200"
-            >Portfolio</a
+            class="text-[#EA580C] hover:text-[#C2410C] px-4 md:px-6 py-2 rounded-md text-base md:text-lg font-medium transition-colors duration-200 relative overflow-hidden group"
           >
+            <span class="relative z-10">Portfolio</span>
+            <span
+              class="absolute inset-0 bg-gray-100 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+            ></span>
+          </a>
           <a
             href="assets/amit-rambaran-resume.pdf"
             target="_blank"
-            class="text-[#EA580C] hover:text-[#C2410C] px-4 md:px-6 py-2 rounded-md text-base md:text-lg font-medium transition-colors duration-200"
-            >Resume</a
+            class="text-[#EA580C] hover:text-[#C2410C] px-4 md:px-6 py-2 rounded-md text-base md:text-lg font-medium transition-colors duration-200 relative overflow-hidden group"
           >
+            <span class="relative z-10">Resume</span>
+            <span
+              class="absolute inset-0 bg-gray-100 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+            ></span>
+          </a>
         </div>
       </div>
     </nav>
@@ -97,7 +135,7 @@
     <div class="flex flex-col min-h-screen">
       <!--Me-->
       <div
-        class="flex items-center justify-center min-h-screen bg-gray-50"
+        class="flex items-center justify-center min-h-screen bg-gradient-to-br from-gray-50 to-gray-100"
         id="header"
       >
         <div class="text-center px-4">
@@ -119,16 +157,16 @@
               href="https://github.com/amitrambaran"
               target="_blank"
               rel="noopener"
-              class="text-[#EA580C] hover:text-[#C2410C] transition-colors duration-200"
+              class="text-[#EA580C] hover:text-[#C2410C] transition-all duration-300 ease-out transform hover:-translate-y-1 hover:scale-110"
             >
               <i class="fab fa-github text-4xl md:text-5xl"></i>
               <div class="mt-2 text-sm md:text-base">GitHub</div>
             </a>
             <a
-              href="https://www.linkedin.com/in/amit-rambaran"
+              href="https://www.linkedin.com/in/amitrambaran"
               target="_blank"
               rel="noopener"
-              class="text-[#EA580C] hover:text-[#C2410C] transition-colors duration-200"
+              class="text-[#EA580C] hover:text-[#C2410C] transition-all duration-300 ease-out transform hover:-translate-y-1 hover:scale-110"
             >
               <i class="fab fa-linkedin text-4xl md:text-5xl"></i>
               <div class="mt-2 text-sm md:text-base">LinkedIn</div>
@@ -137,7 +175,7 @@
               href="https://www.behance.net/amitrambaran"
               target="_blank"
               rel="noopener"
-              class="text-[#EA580C] hover:text-[#C2410C] transition-colors duration-200"
+              class="text-[#EA580C] hover:text-[#C2410C] transition-all duration-300 ease-out transform hover:-translate-y-1 hover:scale-110"
             >
               <i class="fab fa-behance text-4xl md:text-5xl"></i>
               <div class="mt-2 text-sm md:text-base">Designs</div>
@@ -146,7 +184,7 @@
               href="mailto:amit.rambaran@gmail.com"
               target="_blank"
               rel="noopener"
-              class="text-[#EA580C] hover:text-[#C2410C] transition-colors duration-200"
+              class="text-[#EA580C] hover:text-[#C2410C] transition-all duration-300 ease-out transform hover:-translate-y-1 hover:scale-110"
             >
               <i class="fas fa-envelope text-4xl md:text-5xl"></i>
               <div class="mt-2 text-sm md:text-base">Mail</div>
@@ -156,22 +194,23 @@
       </div>
 
       <!--Portfolio-->
-
-      <div class="py-16" id="portfolio">
+      <div class="py-16 bg-gray-50" id="portfolio">
         <div class="container mx-auto px-4 py-4">
-          <h2 class="text-4xl font-bold mb-8">Portfolio</h2>
+          <h2 class="text-4xl font-bold mb-8 relative inline-block">
+            Portfolio
+          </h2>
 
           <div class="container mx-auto">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div class="w-full">
                 <div
-                  class="bg-white rounded-lg shadow-lg overflow-hidden h-full flex flex-col"
+                  class="bg-white rounded-lg shadow-xl overflow-hidden h-full flex flex-col transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl"
                 >
-                  <div class="relative pb-[75%]">
+                  <div class="relative pb-[75%] overflow-hidden">
                     <img
                       src="assets/twedsa.png"
                       alt="T Weds A"
-                      class="absolute inset-0 w-full h-full object-cover"
+                      class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 hover:scale-105"
                     />
                   </div>
                   <div class="p-6 flex-grow">
@@ -188,15 +227,15 @@
                     </div>
                     <div class="flex flex-wrap gap-2 mb-4">
                       <span
-                        class="px-2 py-0.5 bg-gray-600 text-white rounded-full text-xs"
+                        class="px-2 py-0.5 bg-gray-800 text-white rounded-full text-xs"
                         >Next.js</span
                       >
                       <span
-                        class="px-2 py-0.5 bg-gray-600 text-white rounded-full text-xs"
+                        class="px-2 py-0.5 bg-gray-800 text-white rounded-full text-xs"
                         >JavaScript</span
                       >
                       <span
-                        class="px-2 py-0.5 bg-gray-600 text-white rounded-full text-xs"
+                        class="px-2 py-0.5 bg-gray-800 text-white rounded-full text-xs"
                         >HTML/CSS</span
                       >
                     </div>
@@ -208,7 +247,7 @@
                       href="https://triciawedsamit2025.ca"
                       target="_blank"
                       rel="noopener"
-                      class="inline-flex items-center justify-center px-3 sm:px-3 py-1.5 sm:py-1.5 bg-gray-50 text-[#EA580C] rounded border border-gray-200 hover:bg-gray-100 transition-colors text-sm font-bold"
+                      class="inline-flex items-center justify-center px-3 sm:px-3 py-1.5 sm:py-1.5 bg-gray-50 text-[#EA580C] rounded border border-[#EA580C] hover:bg-[#EA580C] hover:text-white transition-colors text-sm font-bold"
                     >
                       <span class="mr-2">Demo</span>
                       <i class="fas fa-external-link-alt"></i>
@@ -217,7 +256,7 @@
                       href="https://github.com/amitrambaran/twedsa"
                       target="_blank"
                       rel="noopener"
-                      class="inline-flex items-center justify-center px-3 sm:px-3 py-1.5 sm:py-1.5 bg-gray-50 text-[#EA580C] rounded border border-gray-200 hover:bg-gray-100 transition-colors text-sm font-bold"
+                      class="inline-flex items-center justify-center px-3 sm:px-3 py-1.5 sm:py-1.5 bg-gray-50 text-[#EA580C] rounded border border-[#EA580C] hover:bg-[#EA580C] hover:text-white transition-colors text-sm font-bold"
                     >
                       <span class="mr-2">GitHub</span>
                       <i class="fab fa-github"></i>
@@ -228,13 +267,13 @@
 
               <div class="w-full">
                 <div
-                  class="bg-white rounded-lg shadow-lg overflow-hidden h-full flex flex-col"
+                  class="bg-white rounded-lg shadow-xl overflow-hidden h-full flex flex-col transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl"
                 >
-                  <div class="relative pb-[75%]">
+                  <div class="relative pb-[75%] overflow-hidden">
                     <img
                       src="assets/trillavibes.png"
                       alt="trillavibes"
-                      class="absolute inset-0 w-full h-full object-cover"
+                      class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 hover:scale-105"
                     />
                   </div>
                   <div class="p-6 flex-grow">
@@ -249,27 +288,27 @@
                     </div>
                     <div class="flex flex-wrap gap-2 mb-4">
                       <span
-                        class="px-2 py-0.5 bg-gray-600 text-white rounded-full text-xs"
+                        class="px-2 py-0.5 bg-gray-800 text-white rounded-full text-xs"
                         >HTML</span
                       >
                       <span
-                        class="px-2 py-0.5 bg-gray-600 text-white rounded-full text-xs"
+                        class="px-2 py-0.5 bg-gray-800 text-white rounded-full text-xs"
                         >CSS Keyframes</span
                       >
                       <span
-                        class="px-2 py-0.5 bg-gray-600 text-white rounded-full text-xs"
+                        class="px-2 py-0.5 bg-gray-800 text-white rounded-full text-xs"
                         >JavaScript</span
                       >
                       <span
-                        class="px-2 py-0.5 bg-gray-600 text-white rounded-full text-xs"
+                        class="px-2 py-0.5 bg-gray-800 text-white rounded-full text-xs"
                         >Vultr</span
                       >
                       <span
-                        class="px-2 py-0.5 bg-gray-600 text-white rounded-full text-xs"
+                        class="px-2 py-0.5 bg-gray-800 text-white rounded-full text-xs"
                         >NginX</span
                       >
                       <span
-                        class="px-2 py-0.5 bg-gray-600 text-white rounded-full text-xs"
+                        class="px-2 py-0.5 bg-gray-800 text-white rounded-full text-xs"
                         >CertBot</span
                       >
                     </div>
@@ -281,7 +320,7 @@
                       href="https://amitrambaran.ca/trillavibes/"
                       target="_blank"
                       rel="noopener"
-                      class="inline-flex items-center justify-center px-3 sm:px-3 py-1.5 sm:py-1.5 bg-gray-50 text-[#EA580C] rounded border border-gray-200 hover:bg-gray-100 transition-colors text-sm font-bold"
+                      class="inline-flex items-center justify-center px-3 sm:px-3 py-1.5 sm:py-1.5 bg-gray-50 text-[#EA580C] rounded border border-[#EA580C] hover:bg-[#EA580C] hover:text-white transition-colors text-sm font-bold"
                     >
                       <span class="mr-2">Demo</span>
                       <i class="fas fa-external-link-alt"></i>
@@ -290,7 +329,7 @@
                       href="https://github.com/amitrambaran/trillavibes"
                       target="_blank"
                       rel="noopener"
-                      class="inline-flex items-center justify-center px-3 sm:px-3 py-1.5 sm:py-1.5 bg-gray-50 text-[#EA580C] rounded border border-gray-200 hover:bg-gray-100 transition-colors text-sm font-bold"
+                      class="inline-flex items-center justify-center px-3 sm:px-3 py-1.5 sm:py-1.5 bg-gray-50 text-[#EA580C] rounded border border-[#EA580C] hover:bg-[#EA580C] hover:text-white transition-colors text-sm font-bold"
                     >
                       <span class="mr-2">GitHub</span>
                       <i class="fab fa-github"></i>
@@ -301,13 +340,13 @@
 
               <div class="w-full">
                 <div
-                  class="bg-white rounded-lg shadow-lg overflow-hidden h-full flex flex-col"
+                  class="bg-white rounded-lg shadow-xl overflow-hidden h-full flex flex-col transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl"
                 >
-                  <div class="relative pb-[75%]">
+                  <div class="relative pb-[75%] overflow-hidden">
                     <img
                       src="assets/acme-locations.jpg"
                       alt="acme locations"
-                      class="absolute inset-0 w-full h-full object-cover"
+                      class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 hover:scale-105"
                     />
                   </div>
                   <div class="p-6 flex-grow">
@@ -323,39 +362,39 @@
                     </div>
                     <div class="flex flex-wrap gap-2 mb-4">
                       <span
-                        class="px-2 py-0.5 bg-gray-600 text-white rounded-full text-xs"
+                        class="px-2 py-0.5 bg-gray-800 text-white rounded-full text-xs"
                         >HTML</span
                       >
                       <span
-                        class="px-2 py-0.5 bg-gray-600 text-white rounded-full text-xs"
+                        class="px-2 py-0.5 bg-gray-800 text-white rounded-full text-xs"
                         >CSS</span
                       >
                       <span
-                        class="px-2 py-0.5 bg-gray-600 text-white rounded-full text-xs"
+                        class="px-2 py-0.5 bg-gray-800 text-white rounded-full text-xs"
                         >JavaScript</span
                       >
                       <span
-                        class="px-2 py-0.5 bg-gray-600 text-white rounded-full text-xs"
+                        class="px-2 py-0.5 bg-gray-800 text-white rounded-full text-xs"
                         >React</span
                       >
                       <span
-                        class="px-2 py-0.5 bg-gray-600 text-white rounded-full text-xs"
+                        class="px-2 py-0.5 bg-gray-800 text-white rounded-full text-xs"
                         >Axios</span
                       >
                       <span
-                        class="px-2 py-0.5 bg-gray-600 text-white rounded-full text-xs"
+                        class="px-2 py-0.5 bg-gray-800 text-white rounded-full text-xs"
                         >Moment</span
                       >
                       <span
-                        class="px-2 py-0.5 bg-gray-600 text-white rounded-full text-xs"
+                        class="px-2 py-0.5 bg-gray-800 text-white rounded-full text-xs"
                         >Hooks</span
                       >
                       <span
-                        class="px-2 py-0.5 bg-gray-600 text-white rounded-full text-xs"
+                        class="px-2 py-0.5 bg-gray-800 text-white rounded-full text-xs"
                         >Styled components</span
                       >
                       <span
-                        class="px-2 py-0.5 bg-gray-600 text-white rounded-full text-xs"
+                        class="px-2 py-0.5 bg-gray-800 text-white rounded-full text-xs"
                         >JSON</span
                       >
                     </div>
@@ -367,7 +406,7 @@
                       href="https://amitrambaran.ca/acme-locations/"
                       target="_blank"
                       rel="noopener"
-                      class="inline-flex items-center justify-center px-3 sm:px-3 py-1.5 sm:py-1.5 bg-gray-50 text-[#EA580C] rounded border border-gray-200 hover:bg-gray-100 transition-colors text-sm font-bold"
+                      class="inline-flex items-center justify-center px-3 sm:px-3 py-1.5 sm:py-1.5 bg-gray-50 text-[#EA580C] rounded border border-[#EA580C] hover:bg-[#EA580C] hover:text-white transition-colors text-sm font-bold"
                     >
                       <span class="mr-2">Demo</span>
                       <i class="fas fa-external-link-alt"></i>
@@ -376,7 +415,7 @@
                       href="https://github.com/amitrambaran/acme-locations"
                       target="_blank"
                       rel="noopener"
-                      class="inline-flex items-center justify-center px-3 sm:px-3 py-1.5 sm:py-1.5 bg-gray-50 text-[#EA580C] rounded border border-gray-200 hover:bg-gray-100 transition-colors text-sm font-bold"
+                      class="inline-flex items-center justify-center px-3 sm:px-3 py-1.5 sm:py-1.5 bg-gray-50 text-[#EA580C] rounded border border-[#EA580C] hover:bg-[#EA580C] hover:text-white transition-colors text-sm font-bold"
                     >
                       <span class="mr-2">GitHub</span>
                       <i class="fab fa-github"></i>
@@ -392,13 +431,13 @@
               >
                 <div class="col-span-1">
                   <div
-                    class="bg-white rounded-lg shadow-lg overflow-hidden h-full flex flex-col"
+                    class="bg-white rounded-lg shadow-xl overflow-hidden h-full flex flex-col transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl"
                   >
-                    <div class="relative pb-[75%]">
+                    <div class="relative pb-[75%] overflow-hidden">
                       <img
                         src="assets/weatherme.jpg"
                         alt="weather app"
-                        class="absolute inset-0 w-full h-full object-cover"
+                        class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 hover:scale-105"
                       />
                     </div>
                     <div class="p-6 flex-grow">
@@ -414,27 +453,27 @@
                       </div>
                       <div class="flex flex-wrap gap-2 mb-4">
                         <span
-                          class="px-2 py-0.5 bg-gray-600 text-white rounded-full text-xs"
+                          class="px-2 py-0.5 bg-gray-800 text-white rounded-full text-xs"
                           >HTML</span
                         >
                         <span
-                          class="px-2 py-0.5 bg-gray-600 text-white rounded-full text-xs"
+                          class="px-2 py-0.5 bg-gray-800 text-white rounded-full text-xs"
                           >CSS</span
                         >
                         <span
-                          class="px-2 py-0.5 bg-gray-600 text-white rounded-full text-xs"
+                          class="px-2 py-0.5 bg-gray-800 text-white rounded-full text-xs"
                           >JavaScript</span
                         >
                         <span
-                          class="px-2 py-0.5 bg-gray-600 text-white rounded-full text-xs"
+                          class="px-2 py-0.5 bg-gray-800 text-white rounded-full text-xs"
                           >AJAX</span
                         >
                         <span
-                          class="px-2 py-0.5 bg-gray-600 text-white rounded-full text-xs"
+                          class="px-2 py-0.5 bg-gray-800 text-white rounded-full text-xs"
                           >JSON</span
                         >
                         <span
-                          class="px-2 py-0.5 bg-gray-600 text-white rounded-full text-xs"
+                          class="px-2 py-0.5 bg-gray-800 text-white rounded-full text-xs"
                           >OpenWeatherMap API</span
                         >
                       </div>
@@ -446,7 +485,7 @@
                         href="https://amitrambaran.ca/weather-app/"
                         target="_blank"
                         rel="noopener"
-                        class="inline-flex items-center justify-center px-3 sm:px-3 py-1.5 sm:py-1.5 bg-gray-50 text-[#EA580C] rounded border border-gray-200 hover:bg-gray-100 transition-colors text-sm font-bold"
+                        class="inline-flex items-center justify-center px-3 sm:px-3 py-1.5 sm:py-1.5 bg-gray-50 text-[#EA580C] rounded border border-[#EA580C] hover:bg-[#EA580C] hover:text-white transition-colors text-sm font-bold"
                       >
                         <span class="mr-2">Demo</span>
                         <i class="fas fa-external-link-alt"></i>
@@ -455,7 +494,7 @@
                         href="https://github.com/amitrambaran/weather-app"
                         target="_blank"
                         rel="noopener"
-                        class="inline-flex items-center justify-center px-3 sm:px-3 py-1.5 sm:py-1.5 bg-gray-50 text-[#EA580C] rounded border border-gray-200 hover:bg-gray-100 transition-colors text-sm font-bold"
+                        class="inline-flex items-center justify-center px-3 sm:px-3 py-1.5 sm:py-1.5 bg-gray-50 text-[#EA580C] rounded border border-[#EA580C] hover:bg-[#EA580C] hover:text-white transition-colors text-sm font-bold"
                       >
                         <span class="mr-2">GitHub</span>
                         <i class="fab fa-github"></i>
@@ -466,13 +505,13 @@
 
                 <div class="col-span-1">
                   <div
-                    class="bg-white rounded-lg shadow-lg overflow-hidden h-full flex flex-col"
+                    class="bg-white rounded-lg shadow-xl overflow-hidden h-full flex flex-col transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl"
                   >
-                    <div class="relative pb-[75%]">
+                    <div class="relative pb-[75%] overflow-hidden">
                       <img
                         src="assets/database.jpg"
                         alt="part database"
-                        class="absolute inset-0 w-full h-full object-cover"
+                        class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 hover:scale-105"
                       />
                     </div>
                     <div class="p-6 flex-grow">
@@ -488,23 +527,23 @@
                       </div>
                       <div class="flex flex-wrap gap-2 mb-4">
                         <span
-                          class="px-2 py-0.5 bg-gray-600 text-white rounded-full text-xs"
+                          class="px-2 py-0.5 bg-gray-800 text-white rounded-full text-xs"
                           >HTML</span
                         >
                         <span
-                          class="px-2 py-0.5 bg-gray-600 text-white rounded-full text-xs"
+                          class="px-2 py-0.5 bg-gray-800 text-white rounded-full text-xs"
                           >CSS</span
                         >
                         <span
-                          class="px-2 py-0.5 bg-gray-600 text-white rounded-full text-xs"
+                          class="px-2 py-0.5 bg-gray-800 text-white rounded-full text-xs"
                           >PHP</span
                         >
                         <span
-                          class="px-2 py-0.5 bg-gray-600 text-white rounded-full text-xs"
+                          class="px-2 py-0.5 bg-gray-800 text-white rounded-full text-xs"
                           >MSSQL</span
                         >
                         <span
-                          class="px-2 py-0.5 bg-gray-600 text-white rounded-full text-xs"
+                          class="px-2 py-0.5 bg-gray-800 text-white rounded-full text-xs"
                           >Windows Server</span
                         >
                       </div>
@@ -517,10 +556,36 @@
         </div>
       </div>
 
-      <footer class="bg-gray-100 py-8 mt-auto">
+      <footer class="bg-gray-800 text-white py-8 mt-auto">
         <div class="container mx-auto px-4 text-center">
+          <div class="mb-4 flex justify-center space-x-4">
+            <a
+              href="https://github.com/amitrambaran"
+              target="_blank"
+              rel="noopener"
+              class="text-white hover:text-[#EA580C] transition-colors duration-200"
+            >
+              <i class="fab fa-github text-xl"></i>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/amitrambaran"
+              target="_blank"
+              rel="noopener"
+              class="text-white hover:text-[#EA580C] transition-colors duration-200"
+            >
+              <i class="fab fa-linkedin text-xl"></i>
+            </a>
+            <a
+              href="mailto:amit.rambaran@gmail.com"
+              target="_blank"
+              rel="noopener"
+              class="text-white hover:text-[#EA580C] transition-colors duration-200"
+            >
+              <i class="fas fa-envelope text-xl"></i>
+            </a>
+          </div>
           <strong class="font-bold">amit.rambaran@gmail.com</strong><br />
-          <span class="text-gray-600"
+          <span class="text-white"
             >&copy; <span id="year"></span> Amit Rambaran</span
           >
         </div>
@@ -554,5 +619,12 @@
       }
       updateFooterContent();
     </script>
+    <script
+      defer=""
+      src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015"
+      integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ=="
+      data-cf-beacon='{"rayId":"90f7f9195bd9ebbd","version":"2025.1.0","r":1,"token":"4d131388e1e844c1a714bfc564d08126","serverTiming":{"name":{"cfExtPri":true,"cfL4":true,"cfSpeedBrain":true,"cfCacheStatus":true}}}'
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
