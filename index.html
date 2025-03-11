@@ -201,7 +201,7 @@
           </h2>
 
           <div class="container mx-auto">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               <div class="w-full">
                 <div
                   class="bg-white rounded-lg shadow-xl overflow-hidden h-full flex flex-col transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl"
@@ -344,6 +344,74 @@
                 >
                   <div class="relative pb-[75%] overflow-hidden">
                     <img
+                      src="assets/picmi.jpg"
+                      alt="picmi"
+                      class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+                    />
+                  </div>
+                  <div class="p-6 flex-grow">
+                    <h3 class="text-2xl font-bold text-center mb-4">PicMi</h3>
+                    <div class="mb-4">
+                      <p class="text-gray-700">
+                        A React-based image search application that leverages
+                        the Unsplash API to help users discover and browse
+                        high-quality photos.
+                      </p>
+                    </div>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                      <span
+                        class="px-2 py-0.5 bg-gray-800 text-white rounded-full text-xs"
+                        >HTML</span
+                      >
+                      <span
+                        class="px-2 py-0.5 bg-gray-800 text-white rounded-full text-xs"
+                        >CSS</span
+                      >
+                      <span
+                        class="px-2 py-0.5 bg-gray-800 text-white rounded-full text-xs"
+                        >JavaScript</span
+                      >
+                      <span
+                        class="px-2 py-0.5 bg-gray-800 text-white rounded-full text-xs"
+                        >React</span
+                      >
+                      <span
+                        class="px-2 py-0.5 bg-gray-800 text-white rounded-full text-xs"
+                        >Unsplash API</span
+                      >
+                    </div>
+                  </div>
+                  <div
+                    class="px-4 sm:pr-6 py-4 bg-gray-50 flex flex-col sm:flex-row justify-center sm:justify-between gap-3 sm:gap-4"
+                  >
+                    <a
+                      href="https://picmi.netlify.app/"
+                      target="_blank"
+                      rel="noopener"
+                      class="inline-flex items-center justify-center px-3 sm:px-3 py-1.5 sm:py-1.5 bg-gray-50 text-[#EA580C] rounded border border-[#EA580C] hover:bg-[#EA580C] hover:text-white transition-colors text-sm font-bold"
+                    >
+                      <span class="mr-2">Demo</span>
+                      <i class="fas fa-external-link-alt"></i>
+                    </a>
+                    <a
+                      href="https://github.com/amitrambaran/picture-search"
+                      target="_blank"
+                      rel="noopener"
+                      class="inline-flex items-center justify-center px-3 sm:px-3 py-1.5 sm:py-1.5 bg-gray-50 text-[#EA580C] rounded border border-[#EA580C] hover:bg-[#EA580C] hover:text-white transition-colors text-sm font-bold"
+                    >
+                      <span class="mr-2">GitHub</span>
+                      <i class="fab fa-github"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="w-full">
+                <div
+                  class="bg-white rounded-lg shadow-xl overflow-hidden h-full flex flex-col transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl"
+                >
+                  <div class="relative pb-[75%] overflow-hidden">
+                    <img
                       src="assets/acme-locations.jpg"
                       alt="acme locations"
                       class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 hover:scale-105"
@@ -423,130 +491,124 @@
                   </div>
                 </div>
               </div>
-            </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-6 gap-6 mt-6">
-              <div
-                class="col-span-6 md:col-start-2 md:col-span-4 grid grid-cols-1 md:grid-cols-2 gap-6"
-              >
-                <div class="col-span-1">
-                  <div
-                    class="bg-white rounded-lg shadow-xl overflow-hidden h-full flex flex-col transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl"
-                  >
-                    <div class="relative pb-[75%] overflow-hidden">
-                      <img
-                        src="assets/weatherme.jpg"
-                        alt="weather app"
-                        class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 hover:scale-105"
-                      />
+              <div class="w-full">
+                <div
+                  class="bg-white rounded-lg shadow-xl overflow-hidden h-full flex flex-col transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl"
+                >
+                  <div class="relative pb-[75%] overflow-hidden">
+                    <img
+                      src="assets/weatherme.jpg"
+                      alt="weather app"
+                      class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+                    />
+                  </div>
+                  <div class="p-6 flex-grow">
+                    <h3 class="text-2xl font-bold text-center mb-4">
+                      WeatherMe
+                    </h3>
+                    <div class="mb-4">
+                      <p class="text-gray-700">
+                        A dynamic, responsive weather app that utilizes the
+                        OpenWeatherMap API to asynchronously display the current
+                        weather/five day forecast.
+                      </p>
                     </div>
-                    <div class="p-6 flex-grow">
-                      <h3 class="text-2xl font-bold text-center mb-4">
-                        WeatherMe
-                      </h3>
-                      <div class="mb-4">
-                        <p class="text-gray-700">
-                          A dynamic, responsive weather app that utilizes the
-                          OpenWeatherMap API to asynchronously display the
-                          current weather/five day forecast.
-                        </p>
-                      </div>
-                      <div class="flex flex-wrap gap-2 mb-4">
-                        <span
-                          class="px-2 py-0.5 bg-gray-800 text-white rounded-full text-xs"
-                          >HTML</span
-                        >
-                        <span
-                          class="px-2 py-0.5 bg-gray-800 text-white rounded-full text-xs"
-                          >CSS</span
-                        >
-                        <span
-                          class="px-2 py-0.5 bg-gray-800 text-white rounded-full text-xs"
-                          >JavaScript</span
-                        >
-                        <span
-                          class="px-2 py-0.5 bg-gray-800 text-white rounded-full text-xs"
-                          >AJAX</span
-                        >
-                        <span
-                          class="px-2 py-0.5 bg-gray-800 text-white rounded-full text-xs"
-                          >JSON</span
-                        >
-                        <span
-                          class="px-2 py-0.5 bg-gray-800 text-white rounded-full text-xs"
-                          >OpenWeatherMap API</span
-                        >
-                      </div>
-                    </div>
-                    <div
-                      class="px-4 sm:pr-6 py-4 bg-gray-50 flex flex-col sm:flex-row justify-center sm:justify-between gap-3 sm:gap-4"
-                    >
-                      <a
-                        href="https://amitrambaran.ca/weather-app/"
-                        target="_blank"
-                        rel="noopener"
-                        class="inline-flex items-center justify-center px-3 sm:px-3 py-1.5 sm:py-1.5 bg-gray-50 text-[#EA580C] rounded border border-[#EA580C] hover:bg-[#EA580C] hover:text-white transition-colors text-sm font-bold"
+                    <div class="flex flex-wrap gap-2 mb-4">
+                      <span
+                        class="px-2 py-0.5 bg-gray-800 text-white rounded-full text-xs"
+                        >HTML</span
                       >
-                        <span class="mr-2">Demo</span>
-                        <i class="fas fa-external-link-alt"></i>
-                      </a>
-                      <a
-                        href="https://github.com/amitrambaran/weather-app"
-                        target="_blank"
-                        rel="noopener"
-                        class="inline-flex items-center justify-center px-3 sm:px-3 py-1.5 sm:py-1.5 bg-gray-50 text-[#EA580C] rounded border border-[#EA580C] hover:bg-[#EA580C] hover:text-white transition-colors text-sm font-bold"
+                      <span
+                        class="px-2 py-0.5 bg-gray-800 text-white rounded-full text-xs"
+                        >CSS</span
                       >
-                        <span class="mr-2">GitHub</span>
-                        <i class="fab fa-github"></i>
-                      </a>
+                      <span
+                        class="px-2 py-0.5 bg-gray-800 text-white rounded-full text-xs"
+                        >JavaScript</span
+                      >
+                      <span
+                        class="px-2 py-0.5 bg-gray-800 text-white rounded-full text-xs"
+                        >AJAX</span
+                      >
+                      <span
+                        class="px-2 py-0.5 bg-gray-800 text-white rounded-full text-xs"
+                        >JSON</span
+                      >
+                      <span
+                        class="px-2 py-0.5 bg-gray-800 text-white rounded-full text-xs"
+                        >OpenWeatherMap API</span
+                      >
                     </div>
                   </div>
-                </div>
-
-                <div class="col-span-1">
                   <div
-                    class="bg-white rounded-lg shadow-xl overflow-hidden h-full flex flex-col transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl"
+                    class="px-4 sm:pr-6 py-4 bg-gray-50 flex flex-col sm:flex-row justify-center sm:justify-between gap-3 sm:gap-4"
                   >
-                    <div class="relative pb-[75%] overflow-hidden">
-                      <img
-                        src="assets/database.jpg"
-                        alt="part database"
-                        class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 hover:scale-105"
-                      />
+                    <a
+                      href="https://amitrambaran.ca/weather-app/"
+                      target="_blank"
+                      rel="noopener"
+                      class="inline-flex items-center justify-center px-3 sm:px-3 py-1.5 sm:py-1.5 bg-gray-50 text-[#EA580C] rounded border border-[#EA580C] hover:bg-[#EA580C] hover:text-white transition-colors text-sm font-bold"
+                    >
+                      <span class="mr-2">Demo</span>
+                      <i class="fas fa-external-link-alt"></i>
+                    </a>
+                    <a
+                      href="https://github.com/amitrambaran/weather-app"
+                      target="_blank"
+                      rel="noopener"
+                      class="inline-flex items-center justify-center px-3 sm:px-3 py-1.5 sm:py-1.5 bg-gray-50 text-[#EA580C] rounded border border-[#EA580C] hover:bg-[#EA580C] hover:text-white transition-colors text-sm font-bold"
+                    >
+                      <span class="mr-2">GitHub</span>
+                      <i class="fab fa-github"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="w-full">
+                <div
+                  class="bg-white rounded-lg shadow-xl overflow-hidden h-full flex flex-col transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl"
+                >
+                  <div class="relative pb-[75%] overflow-hidden">
+                    <img
+                      src="assets/database.jpg"
+                      alt="part database"
+                      class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+                    />
+                  </div>
+                  <div class="p-6 flex-grow">
+                    <h3 class="text-2xl font-bold text-center mb-4">
+                      Automotive Database
+                    </h3>
+                    <div class="mb-4">
+                      <p class="text-gray-700">
+                        A frontend dashboard hosted on an internal network for
+                        600+ actively manufactured automobile parts with
+                        respective surface area measurements. (NDA protected)
+                      </p>
                     </div>
-                    <div class="p-6 flex-grow">
-                      <h3 class="text-2xl font-bold text-center mb-4">
-                        Automotive Database
-                      </h3>
-                      <div class="mb-4">
-                        <p class="text-gray-700">
-                          A frontend dashboard hosted on an internal network for
-                          600+ actively manufactured automobile parts with
-                          respective surface area measurements. (NDA protected)
-                        </p>
-                      </div>
-                      <div class="flex flex-wrap gap-2 mb-4">
-                        <span
-                          class="px-2 py-0.5 bg-gray-800 text-white rounded-full text-xs"
-                          >HTML</span
-                        >
-                        <span
-                          class="px-2 py-0.5 bg-gray-800 text-white rounded-full text-xs"
-                          >CSS</span
-                        >
-                        <span
-                          class="px-2 py-0.5 bg-gray-800 text-white rounded-full text-xs"
-                          >PHP</span
-                        >
-                        <span
-                          class="px-2 py-0.5 bg-gray-800 text-white rounded-full text-xs"
-                          >MSSQL</span
-                        >
-                        <span
-                          class="px-2 py-0.5 bg-gray-800 text-white rounded-full text-xs"
-                          >Windows Server</span
-                        >
-                      </div>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                      <span
+                        class="px-2 py-0.5 bg-gray-800 text-white rounded-full text-xs"
+                        >HTML</span
+                      >
+                      <span
+                        class="px-2 py-0.5 bg-gray-800 text-white rounded-full text-xs"
+                        >CSS</span
+                      >
+                      <span
+                        class="px-2 py-0.5 bg-gray-800 text-white rounded-full text-xs"
+                        >PHP</span
+                      >
+                      <span
+                        class="px-2 py-0.5 bg-gray-800 text-white rounded-full text-xs"
+                        >MSSQL</span
+                      >
+                      <span
+                        class="px-2 py-0.5 bg-gray-800 text-white rounded-full text-xs"
+                        >Windows Server</span
+                      >
                     </div>
                   </div>
                 </div>
