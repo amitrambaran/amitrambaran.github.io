@@ -1,709 +1,1021 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
-    <!-- Metadata -->
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta
-      name="keywords"
-      content="Amit Rambaran, Frontend Developer, Web Development, Website Design, User Experience, High-Performance Websites, Customer-Facing Businesses, Toronto, Branding, Web Developer, Hire"
-    />
     <meta name="author" content="Amit Rambaran" />
     <meta
       name="description"
-      content="Amit Rambaran is a seasoned Frontend Developer experienced with developing websites for high traffic, customer-facing businesses."
+      content="Amit Rambaran is a frontend developer in Toronto building fast, accessible Angular, React, and Next.js websites for customer-facing products and growing companies."
+    />
+    <meta
+      name="robots"
+      content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1"
     />
     <meta
       property="og:description"
-      content="Amit Rambaran is a seasoned Frontend Developer experienced with developing websites for high traffic, customer-facing businesses."
+      content="Fast, accessible frontend work for customer-facing products, polished marketing sites, and teams hiring frontend talent."
     />
     <meta
       property="og:title"
-      content="Amit Rambaran - Frontend Developer Portfolio"
+      content="Amit Rambaran | Frontend Developer in Toronto"
     />
     <meta
       property="og:image"
       content="https://amitrambaran.ca/assets/meta.webp"
     />
+    <meta
+      property="og:image:alt"
+      content="Preview of Amit Rambaran's frontend developer portfolio"
+    />
     <meta property="og:url" content="https://amitrambaran.ca" />
-    <meta name="theme-color" content="#f3f3f3" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Amit Rambaran" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Amit Rambaran | Frontend Developer in Toronto"
+    />
+    <meta
+      name="twitter:description"
+      content="Angular, React, and Next.js websites with strong UX, performance, and production polish for teams hiring frontend talent."
+    />
+    <meta name="theme-color" content="#f5f8f2" />
     <link rel="canonical" href="https://amitrambaran.ca" />
 
-    <title>Amit Rambaran | Portfolio</title>
+    <title>Amit Rambaran | Frontend Developer in Toronto</title>
 
     <link rel="shortcut icon" href="assets/favicon.png" />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-      crossorigin="anonymous"
-    />
+    <link rel="stylesheet" href="css/tailwind.css" />
     <link rel="stylesheet" href="css/app.css" />
-    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-    <style>
-      /* Custom scrollbar styling to match orange theme */
-      ::-webkit-scrollbar {
-        width: 12px;
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Amit Rambaran",
+        "url": "https://amitrambaran.ca",
+        "jobTitle": "Frontend Developer",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Toronto",
+          "addressCountry": "CA"
+        },
+        "email": "mailto:amit.rambaran@gmail.com",
+        "sameAs": [
+          "https://github.com/amitrambaran",
+          "https://www.linkedin.com/in/amitrambaran",
+          "https://www.behance.net/amitrambaran",
+          "https://smartcookienewsletter.substack.com/"
+        ]
       }
-
-      ::-webkit-scrollbar-track {
-        background: #f1f1f1;
-        border-radius: 10px;
-      }
-
-      ::-webkit-scrollbar-thumb {
-        background: #ea580c;
-        border-radius: 10px;
-        border: 3px solid #f1f1f1;
-      }
-
-      ::-webkit-scrollbar-thumb:hover {
-        background: #c2410c;
-      }
-
-      /* Cursor animation - updated for stability */
-      .typed-cursor {
-        font-size: inherit;
-        line-height: inherit;
-        opacity: 1;
-        display: inline-block;
-        vertical-align: text-bottom;
-        margin-left: 2px;
-      }
-
-      .typed-cursor.typed-cursor--blink {
-        animation: typedCursorBlink 0.8s infinite;
-      }
-
-      @keyframes typedCursorBlink {
-        0%,
-        100% {
-          opacity: 1;
-        }
-        50% {
-          opacity: 0;
-        }
-      }
-    </style>
-
-    <!-- Google tag (gtag.js) -->
-    <script
-      async=""
-      src="https://www.googletagmanager.com/gtag/js?id=G-PLQCQCMT04"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-
-      gtag("config", "G-PLQCQCMT04");
     </script>
   </head>
 
-  <body class="font-sans">
+  <body class="font-sans text-slate-800">
+    <a class="skip-link" href="#main-content">Skip to content</a>
+
     <nav
-      class="bg-white border-b border-gray-100 fixed w-full z-50 shadow-sm"
-      aria-label="main navigation"
+      class="fixed inset-x-0 top-0 z-50 border-b border-slate-200/70 bg-white/85 backdrop-blur"
+      aria-label="Main navigation"
     >
-      <div class="container mx-auto px-4">
-        <div class="flex items-center justify-center h-16">
+      <div
+        class="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6"
+      >
+        <a
+          href="#header"
+          class="text-sm font-bold tracking-[0.18em] text-slate-900"
+          >AMIT RAMBARAN</a
+        >
+        <button
+          type="button"
+          id="mobile-menu-button"
+          class="mobile-menu-toggle button-link inline-flex h-11 w-11 items-center justify-center rounded-full border border-slate-300 bg-white/90 text-slate-900 transition hover:bg-slate-100 sm:hidden"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+          aria-label="Open navigation menu"
+        >
+          <svg viewBox="0 0 24 24" class="icon-svg" aria-hidden="true">
+            <path d="M3.75 6.75h16.5v1.5H3.75v-1.5Zm0 4.5h16.5v1.5H3.75v-1.5Zm0 4.5h16.5v1.5H3.75v-1.5Z"/>
+          </svg>
+        </button>
+        <div
+          id="desktop-menu"
+          class="desktop-menu hidden items-center gap-2 sm:flex sm:gap-3"
+        >
+          <a
+            href="#about"
+            class="nav-link rounded-full px-3 py-2 text-sm font-medium text-slate-600 transition hover:text-[var(--accent-strong)]"
+            >About</a
+          >
           <a
             href="#portfolio"
-            class="text-[#EA580C] hover:text-[#C2410C] px-4 md:px-6 py-2 rounded-md text-base md:text-lg font-medium transition-colors duration-200 relative overflow-hidden group"
+            class="nav-link rounded-full px-3 py-2 text-sm font-medium text-slate-600 transition hover:text-[var(--accent-strong)]"
+            >Work</a
           >
-            <span class="relative z-10">Portfolio</span>
-            <span
-              class="absolute inset-0 bg-gray-100 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-            ></span>
-          </a>
           <a
             href="assets/amit-rambaran-resume.pdf"
             target="_blank"
-            class="text-[#EA580C] hover:text-[#C2410C] px-4 md:px-6 py-2 rounded-md text-base md:text-lg font-medium transition-colors duration-200 relative overflow-hidden group"
+            rel="noopener noreferrer"
+            class="button-link cta-outline-accent rounded-full px-4 py-2 text-sm font-semibold transition"
+            >Resume</a
           >
-            <span class="relative z-10">Resume</span>
-            <span
-              class="absolute inset-0 bg-gray-100 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-            ></span>
-          </a>
+          <a
+            href="mailto:amit.rambaran@gmail.com?subject=Frontend%20Opportunity%20for%20Amit%20Rambaran"
+            class="button-link nav-role-cta cta-solid hidden rounded-full px-4 py-2 text-sm font-semibold transition sm:inline-flex"
+            >Discuss a Role</a
+          >
+        </div>
+      </div>
+      <div
+        id="mobile-menu"
+        class="mx-auto hidden max-w-6xl border-t border-slate-200/70 px-4 py-3 sm:hidden"
+      >
+        <div class="flex flex-col gap-2">
+          <a
+            href="#about"
+            class="nav-link rounded-2xl border border-slate-200 bg-white/90 px-4 py-3 text-sm font-medium text-slate-700 transition hover:border-[var(--accent-strong)] hover:text-[var(--accent-strong)]"
+            >About</a
+          >
+          <a
+            href="#portfolio"
+            class="nav-link rounded-2xl border border-slate-200 bg-white/90 px-4 py-3 text-sm font-medium text-slate-700 transition hover:border-[var(--accent-strong)] hover:text-[var(--accent-strong)]"
+            >Work</a
+          >
+          <a
+            href="assets/amit-rambaran-resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="button-link cta-outline-accent rounded-2xl px-4 py-3 text-sm font-semibold transition"
+            >Resume</a
+          >
+          <a
+            href="mailto:amit.rambaran@gmail.com?subject=Frontend%20Opportunity%20for%20Amit%20Rambaran"
+            class="button-link cta-solid rounded-2xl px-4 py-3 text-center text-sm font-semibold transition"
+            >Discuss a Role</a
+          >
         </div>
       </div>
     </nav>
 
-    <div class="flex flex-col min-h-screen">
-      <!--Me-->
-      <div
-        class="flex items-center justify-center min-h-screen bg-gradient-to-br from-gray-50 to-gray-100"
+    <main id="main-content" class="pt-16">
+      <section
         id="header"
+        class="hero-shell flex min-h-screen items-center px-4 py-16 sm:px-6"
       >
-        <div class="text-center px-4">
-          <h1
-            class="text-[2.5rem] sm:text-5xl md:text-6xl font-bold text-gray-800 mb-4"
-          >
-            <span id="typed-name"></span>
-          </h1>
-          <p
-            class="text-base sm:text-lg md:text-xl text-gray-600 mb-6 md:mb-8 h-12 md:h-16"
-          >
-            <span id="typed-description"></span>
-          </p>
+        <div
+          class="mx-auto grid w-full max-w-6xl gap-8 lg:grid-cols-[minmax(0,1.2fr)_minmax(320px,0.8fr)] lg:items-center"
+        >
+          <div class="space-y-6">
+            <span class="eyebrow">
+              <svg viewBox="0 0 24 24" class="icon-svg shrink-0" aria-hidden="true">
+                <path d="M12 2.25A7.25 7.25 0 0 0 4.75 9.5c0 5.08 6.1 11.52 6.36 11.79a1.23 1.23 0 0 0 1.78 0c.26-.27 6.36-6.71 6.36-11.79A7.25 7.25 0 0 0 12 2.25Zm0 10.25a3 3 0 1 1 0-6 3 3 0 0 1 0 6Z"/>
+              </svg>
+              <span>Frontend Developer in Toronto</span>
+            </span>
+            <div class="space-y-5">
+              <h1
+                class="max-w-4xl text-5xl font-bold leading-tight text-slate-900 sm:text-6xl lg:text-7xl"
+              >
+                Amit Rambaran
+              </h1>
+              <p class="max-w-3xl text-lg leading-8 text-slate-700 sm:text-xl">
+                I build fast, accessible websites and frontend products with
+                Angular, React, Next.js, and clean UX thinking that helps teams
+                convert attention into action.
+              </p>
+              <p class="max-w-2xl text-base leading-7 text-slate-500">
+                Available for frontend roles at companies where performance,
+                polish, and clarity matter as much as the first impression.
+              </p>
+            </div>
 
-          <div
-            class="flex flex-wrap justify-center items-center gap-4 md:gap-8"
-          >
-            <a
-              href="https://github.com/amitrambaran"
-              target="_blank"
-              rel="noopener"
-              class="text-[#EA580C] hover:text-[#C2410C] transition-all duration-300 ease-out transform hover:-translate-y-1 hover:scale-110"
+            <div class="flex flex-wrap items-center gap-3">
+              <a
+                href="mailto:amit.rambaran@gmail.com?subject=Let%27s%20talk%20about%20a%20frontend%20role"
+                class="button-link cta-solid rounded-full px-6 py-3 text-sm font-semibold transition"
+                >Hire Amit</a
+              >
+              <a
+                href="#portfolio"
+                class="button-link cta-outline-ink rounded-full px-6 py-3 text-sm font-semibold transition"
+                >View Selected Work</a
+              >
+            </div>
+
+            <div class="flex flex-wrap items-center gap-4 pt-4">
+              <a
+                href="https://github.com/amitrambaran"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Visit Amit Rambaran on GitHub"
+                class="social-link inline-flex items-center gap-3 rounded-full border border-slate-300 bg-white/90 px-4 py-3 text-sm font-medium text-slate-800 transition hover:border-slate-900 hover:text-slate-950"
+              >
+                <span class="emoji-badge" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" class="icon-svg">
+                    <path
+                      d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.2 11.38.6.11.82-.26.82-.58 0-.29-.01-1.04-.02-2.05-3.34.73-4.04-1.61-4.04-1.61-.55-1.38-1.33-1.75-1.33-1.75-1.09-.74.08-.73.08-.73 1.2.08 1.84 1.24 1.84 1.24 1.08 1.84 2.82 1.31 3.5 1 .11-.78.42-1.31.76-1.61-2.67-.3-5.48-1.33-5.48-5.93 0-1.31.47-2.38 1.24-3.22-.12-.31-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23A11.5 11.5 0 0 1 12 6.8c1.02 0 2.05.14 3.01.41 2.29-1.55 3.29-1.23 3.29-1.23.66 1.66.25 2.87.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.62-5.49 5.92.43.37.81 1.1.81 2.22 0 1.61-.01 2.91-.01 3.31 0 .32.22.7.82.58A12.01 12.01 0 0 0 24 12c0-6.63-5.37-12-12-12Z"
+                    />
+                  </svg>
+                </span>
+                <span>GitHub</span>
+              </a>
+              <a
+                href="https://www.linkedin.com/in/amitrambaran"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Visit Amit Rambaran on LinkedIn"
+                class="social-link inline-flex items-center gap-3 rounded-full border border-slate-300 bg-white/90 px-4 py-3 text-sm font-medium text-slate-800 transition hover:border-slate-900 hover:text-slate-950"
+              >
+                <span class="emoji-badge" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" class="icon-svg">
+                    <path
+                      d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.05-1.86-3.05-1.87 0-2.16 1.46-2.16 2.96v5.66H9.31V9h3.42v1.56h.05c.48-.9 1.64-1.86 3.37-1.86 3.6 0 4.27 2.37 4.27 5.45v6.3ZM5.29 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14ZM7.07 20.45H3.5V9h3.57v11.45ZM22.22 0H1.77C.8 0 0 .77 0 1.72v20.56C0 23.23.8 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0Z"
+                    />
+                  </svg>
+                </span>
+                <span>LinkedIn</span>
+              </a>
+              <a
+                href="https://www.behance.net/amitrambaran"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Visit Amit Rambaran on Behance"
+                class="social-link inline-flex items-center gap-3 rounded-full border border-slate-300 bg-white/90 px-4 py-3 text-sm font-medium text-slate-800 transition hover:border-slate-900 hover:text-slate-950"
+              >
+                <span class="emoji-badge" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" class="icon-svg">
+                    <path
+                      d="M8.07 10.55c1.2 0 2.17-.97 2.17-2.17 0-1.2-.97-2.17-2.17-2.17H3.72v4.34h4.35Zm0 7.24H3.72V12.2h4.68c1.28 0 2.32 1.04 2.32 2.32 0 1.82-1.3 3.27-2.65 3.27Zm7.11-.14c0 1.21-.98 2.2-2.2 2.2h-4.8v-4.4h4.8c1.22 0 2.2.99 2.2 2.2Zm-.2-5.58h-6.8V4.15H15c2.54 0 4.6 1.98 4.6 4.42 0 1.7-.98 3.18-2.42 3.9 2.04.54 3.52 2.35 3.52 4.52 0 2.59-2.12 4.69-4.72 4.69H3V2h12c3.64 0 6.6 2.93 6.6 6.54 0 2.36-1.27 4.42-3.17 5.53 1.43.89 2.39 2.47 2.39 4.29 0 2.68-2.18 4.86-4.84 4.86H3v-3.37h12.16c.98 0 1.78-.8 1.78-1.78 0-.99-.8-1.79-1.78-1.79h-4.93v-4.2h4.75c.95 0 1.73-.77 1.73-1.72 0-.95-.78-1.73-1.73-1.73Z"
+                    />
+                  </svg>
+                </span>
+                <span>Behance</span>
+              </a>
+              <a
+                href="https://smartcookienewsletter.substack.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Read Amit Rambaran's newsletter"
+                class="social-link inline-flex items-center gap-3 rounded-full border border-slate-300 bg-white/90 px-4 py-3 text-sm font-medium text-slate-800 transition hover:border-slate-900 hover:text-slate-950"
+              >
+                <span class="emoji-badge" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" class="icon-svg">
+                    <path
+                      d="M3 4.5A2.5 2.5 0 0 1 5.5 2h9A2.5 2.5 0 0 1 17 4.5V22l-4.5-2-4.5 2V4.5ZM19.5 4A2.5 2.5 0 0 1 22 6.5v11A2.5 2.5 0 0 1 19.5 20H18V4h1.5ZM6 7h8v1.5H6V7Zm0 3.5h8V12H6v-1.5Zm0 3.5h5V15.5H6V14Z"
+                    />
+                  </svg>
+                </span>
+                <span>Newsletter</span>
+              </a>
+            </div>
+          </div>
+
+          <aside class="hero-panel rounded-3xl p-6 sm:p-8">
+            <div class="space-y-6">
+              <div>
+                <p
+                  class="text-sm font-bold uppercase tracking-[0.16em] text-[var(--accent-strong)]"
+                >
+                  What I Focus On
+                </p>
+                <h2 class="mt-3 text-2xl font-bold text-slate-900">
+                  Frontend work that feels crisp, useful, and easy to trust
+                </h2>
+              </div>
+              <div class="grid gap-4 sm:grid-cols-3 lg:grid-cols-1">
+                <div class="metric-card rounded-2xl p-4">
+                  <p
+                    class="text-xs font-bold uppercase tracking-[0.14em] text-slate-500"
+                  >
+                    Build
+                  </p>
+                  <p class="mt-2 text-sm leading-6 text-slate-700">
+                    Angular, React, and Next.js interfaces with clean structure
+                    and readable components.
+                  </p>
+                </div>
+                <div class="metric-card rounded-2xl p-4">
+                  <p
+                    class="text-xs font-bold uppercase tracking-[0.14em] text-slate-500"
+                  >
+                    Shape
+                  </p>
+                  <p class="mt-2 text-sm leading-6 text-slate-700">
+                    UI systems that help product ideas feel obvious to use on
+                    desktop and mobile.
+                  </p>
+                </div>
+                <div class="metric-card rounded-2xl p-4">
+                  <p
+                    class="text-xs font-bold uppercase tracking-[0.14em] text-slate-500"
+                  >
+                    Polish
+                  </p>
+                  <p class="mt-2 text-sm leading-6 text-slate-700">
+                    Performance, accessibility, and visual clarity that hold up
+                    beyond the first screenshot.
+                  </p>
+                </div>
+              </div>
+              <div class="rounded-2xl bg-slate-900 px-5 py-4 text-white">
+                <p class="text-sm font-semibold">Currently open to:</p>
+                <p class="mt-2 text-sm leading-6 text-slate-300">
+                  Frontend roles at companies that want clean implementation,
+                  strong UX instincts, and polished product-facing work.
+                </p>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section id="about" class="px-4 py-20 sm:px-6">
+        <div
+          class="mx-auto grid max-w-6xl gap-8 lg:grid-cols-[minmax(0,1fr)_minmax(320px,0.9fr)]"
+        >
+          <div class="content-panel rounded-3xl p-8 sm:p-10">
+            <p
+              class="text-sm font-bold uppercase tracking-[0.16em] text-[var(--accent-strong)]"
             >
-              <i class="fab fa-github text-3xl md:text-4xl"></i>
-              <div class="mt-1 text-xs md:text-sm">GitHub</div>
-            </a>
-            <a
-              href="https://www.linkedin.com/in/amitrambaran"
-              target="_blank"
-              rel="noopener"
-              class="text-[#EA580C] hover:text-[#C2410C] transition-all duration-300 ease-out transform hover:-translate-y-1 hover:scale-110"
-            >
-              <i class="fab fa-linkedin text-3xl md:text-4xl"></i>
-              <div class="mt-1 text-xs md:text-sm">LinkedIn</div>
-            </a>
-            <a
-              href="https://www.behance.net/amitrambaran"
-              target="_blank"
-              rel="noopener"
-              class="text-[#EA580C] hover:text-[#C2410C] transition-all duration-300 ease-out transform hover:-translate-y-1 hover:scale-110"
-            >
-              <i class="fab fa-behance text-3xl md:text-4xl"></i>
-              <div class="mt-1 text-xs md:text-sm">Designs</div>
-            </a>
-            <a
-              href="https://smartcookienewsletter.substack.com/"
-              target="_blank"
-              rel="noopener"
-              class="text-[#EA580C] hover:text-[#C2410C] transition-all duration-300 ease-out transform hover:-translate-y-1 hover:scale-110"
-            >
-              <i class="fas fa-newspaper text-3xl md:text-4xl"></i>
-              <div class="mt-1 text-xs md:text-sm">Newsletter</div>
-            </a>
-            <a
-              href="mailto:amit.rambaran@gmail.com"
-              target="_blank"
-              rel="noopener"
-              class="text-[#EA580C] hover:text-[#C2410C] transition-all duration-300 ease-out transform hover:-translate-y-1 hover:scale-110"
-            >
-              <i class="fas fa-envelope text-3xl md:text-4xl"></i>
-              <div class="mt-1 text-xs md:text-sm">Mail</div>
-            </a>
+              About
+            </p>
+            <h2 class="section-title mt-4 text-3xl font-bold sm:text-4xl">
+              Frontend work built for speed, clarity, and conversion
+            </h2>
+            <p class="section-copy mt-5 max-w-2xl text-base leading-8">
+              I design and build customer-facing experiences that feel easy to
+              trust from the first click. My sweet spot is the space where
+              product thinking, frontend engineering, and visual polish all have
+              to work together without slowing each other down.
+            </p>
+            <p class="section-copy mt-5 max-w-2xl text-base leading-8">
+              Whether the goal is a marketing site that converts, a product UI
+              that stays readable under real data, or a branded experience that
+              still scores well on performance and accessibility, I aim to keep
+              the interface fast, intentional, and production-ready.
+            </p>
+          </div>
+
+          <div class="grid gap-4">
+            <div class="content-panel rounded-3xl p-6">
+              <p
+                class="text-sm font-bold uppercase tracking-[0.16em] text-[var(--accent-strong)]"
+              >
+                Core Stack
+              </p>
+              <div class="mt-4 flex flex-wrap gap-2">
+                <span
+                  class="tag-pill rounded-full px-3 py-2 text-sm font-medium"
+                  >React</span
+                >
+                <span
+                  class="tag-pill rounded-full px-3 py-2 text-sm font-medium"
+                  >Next.js</span
+                >
+                <span
+                  class="tag-pill rounded-full px-3 py-2 text-sm font-medium"
+                  >Angular</span
+                >
+                <span
+                  class="tag-pill rounded-full px-3 py-2 text-sm font-medium"
+                  >TypeScript</span
+                >
+                <span
+                  class="tag-pill rounded-full px-3 py-2 text-sm font-medium"
+                  >JavaScript</span
+                >
+                <span
+                  class="tag-pill rounded-full px-3 py-2 text-sm font-medium"
+                  >HTML/CSS</span
+                >
+                <span
+                  class="tag-pill rounded-full px-3 py-2 text-sm font-medium"
+                  >API Integrations</span
+                >
+                <span
+                  class="tag-pill rounded-full px-3 py-2 text-sm font-medium"
+                  >Web Performance</span
+                >
+                <span
+                  class="tag-pill rounded-full px-3 py-2 text-sm font-medium"
+                  >Contentful</span
+                >
+                <span
+                  class="tag-pill rounded-full px-3 py-2 text-sm font-medium"
+                  >BFF Architecture</span
+                >
+                <span
+                  class="tag-pill rounded-full px-3 py-2 text-sm font-medium"
+                  >Agile Delivery</span
+                >
+              </div>
+            </div>
+
+            <div class="content-panel rounded-3xl p-6">
+              <p
+                class="text-sm font-bold uppercase tracking-[0.16em] text-[var(--accent-strong)]"
+              >
+                Working Style
+              </p>
+              <ul class="mt-4 space-y-3 text-sm leading-7 text-slate-600">
+                <li>Clear hierarchy before decorative complexity.</li>
+                <li>Responsive layouts that stay calm under real content.</li>
+                <li>
+                  Performance and accessibility treated as product features.
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
-      </div>
+      </section>
 
-      <!--Portfolio-->
-      <div class="bg-gray-50 py-6 scroll-mt-16" id="portfolio">
-        <div class="container mx-auto px-4 py-4">
-          <h2 class="text-3xl md:text-4xl font-bold mb-8 relative inline-block">
-            Portfolio
-          </h2>
+      <section id="portfolio" class="px-4 py-20 sm:px-6">
+        <div class="mx-auto max-w-6xl">
+          <div class="mb-10 max-w-3xl">
+            <p
+              class="text-sm font-bold uppercase tracking-[0.16em] text-[var(--accent-strong)]"
+            >
+              Selected Work
+            </p>
+            <h2 class="section-title mt-4 text-3xl font-bold sm:text-4xl">
+              Selected work that shows how I approach product-facing frontend
+            </h2>
+            <p class="section-copy mt-4 text-base leading-8">
+              I lead with the projects that best show my taste in interaction
+              design, implementation choices, and the kind of user experience I
+              like to ship.
+            </p>
+          </div>
 
-          <div class="container mx-auto">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              <div class="w-full">
-                <div
-                  class="bg-white rounded-lg shadow-xl overflow-hidden h-full flex flex-col transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl"
+          <div class="grid gap-6 lg:grid-cols-2">
+            <article class="project-card featured rounded-3xl p-6 sm:p-8">
+              <div class="aspect-[16/10] overflow-hidden rounded-2xl">
+                <img
+                  src="assets/twedsa.png"
+                  alt="Preview of the T Weds A wedding website"
+                  loading="lazy"
+                  decoding="async"
+                  width="1023"
+                  height="655"
+                  class="h-full w-full object-cover transition duration-500"
+                />
+              </div>
+              <div class="mt-6 space-y-4">
+                <p
+                  class="project-kicker text-sm font-bold uppercase tracking-[0.16em]"
                 >
-                  <div class="relative pb-[75%] overflow-hidden">
-                    <img
-                      src="assets/twedsa.png"
-                      alt="T Weds A"
-                      class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 hover:scale-105"
-                    />
+                  Featured Project
+                </p>
+                <div class="flex flex-wrap items-center justify-between gap-3">
+                  <h3 class="text-2xl font-bold text-slate-900">T Weds A</h3>
+                  <div class="flex flex-wrap gap-2">
+                    <span
+                      class="tag-pill rounded-full px-3 py-1 text-xs font-semibold"
+                      >Next.js</span
+                    >
+                    <span
+                      class="tag-pill rounded-full px-3 py-1 text-xs font-semibold"
+                      >JavaScript</span
+                    >
+                    <span
+                      class="tag-pill rounded-full px-3 py-1 text-xs font-semibold"
+                      >HTML/CSS</span
+                    >
                   </div>
-                  <div class="p-6 flex-grow">
-                    <h3 class="text-2xl font-bold text-center mb-4">
-                      T Weds A
-                    </h3>
-                    <div class="mb-4">
-                      <p class="text-gray-600">
-                        A modern wedding website featuring RSVP management,
-                        event details, and a photo gallery. Built with Next.js,
-                        offering a seamless experience for guests to interact
-                        and stay updated with wedding plans.
-                      </p>
-                    </div>
-                    <div class="flex flex-wrap gap-2 mb-4">
-                      <span
-                        class="px-2 py-0.5 bg-gray-800 text-white rounded-full text-xs"
-                        >Next.js</span
-                      >
-                      <span
-                        class="px-2 py-0.5 bg-gray-800 text-white rounded-full text-xs"
-                        >JavaScript</span
-                      >
-                      <span
-                        class="px-2 py-0.5 bg-gray-800 text-white rounded-full text-xs"
-                        >HTML/CSS</span
-                      >
-                    </div>
-                  </div>
-                  <div
-                    class="px-4 sm:pr-6 py-4 bg-gray-50 flex flex-col sm:flex-row justify-center sm:justify-between gap-3 sm:gap-4"
+                </div>
+                <p class="text-base leading-7">
+                  A polished event website designed to make logistics feel
+                  effortless, with RSVP actions, event details, and visual
+                  storytelling arranged for quick decisions on mobile and
+                  desktop.
+                </p>
+                <ul class="space-y-2 text-sm leading-7">
+                  <li>
+                    Prioritized the key guest actions first so visitors can find
+                    what they need without hunting.
+                  </li>
+                  <li>
+                    Used Next.js to keep the site lightweight, reliable, and
+                    easy to scale with content updates.
+                  </li>
+                </ul>
+                <div class="project-actions">
+                  <a
+                    href="https://triciawedsamit2025.ca"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="project-link project-action project-action-primary"
                   >
-                    <a
-                      href="https://triciawedsamit2025.ca"
-                      target="_blank"
-                      rel="noopener"
-                      class="inline-flex items-center justify-center px-3 sm:px-3 py-1.5 sm:py-1.5 bg-gray-50 text-[#EA580C] rounded border border-[#EA580C] hover:bg-[#EA580C] hover:text-white transition-colors text-sm font-bold"
-                    >
-                      <span class="mr-2">Demo</span>
-                      <i class="fas fa-external-link-alt"></i>
-                    </a>
-                    <a
-                      href="https://github.com/amitrambaran/twedsa"
-                      target="_blank"
-                      rel="noopener"
-                      class="inline-flex items-center justify-center px-3 sm:px-3 py-1.5 sm:py-1.5 bg-gray-50 text-[#EA580C] rounded border border-[#EA580C] hover:bg-[#EA580C] hover:text-white transition-colors text-sm font-bold"
-                    >
-                      <span class="mr-2">GitHub</span>
-                      <i class="fab fa-github"></i>
-                    </a>
-                  </div>
+                    <span>Open Live Site</span>
+                  </a>
+                  <a
+                    href="https://github.com/amitrambaran/twedsa"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="project-link project-action project-action-secondary"
+                  >
+                    <span>GitHub</span>
+                  </a>
                 </div>
               </div>
+            </article>
 
-              <div class="w-full">
-                <div
-                  class="bg-white rounded-lg shadow-xl overflow-hidden h-full flex flex-col transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl"
+            <article class="project-card featured rounded-3xl p-6 sm:p-8">
+              <div class="aspect-[16/10] overflow-hidden rounded-2xl">
+                <img
+                  src="assets/trillavibes.png"
+                  alt="Preview of the TrillaVibes music production website"
+                  loading="lazy"
+                  decoding="async"
+                  width="1303"
+                  height="744"
+                  class="h-full w-full object-cover transition duration-500"
+                />
+              </div>
+              <div class="mt-6 space-y-4">
+                <p
+                  class="project-kicker text-sm font-bold uppercase tracking-[0.16em]"
                 >
-                  <div class="relative pb-[75%] overflow-hidden">
-                    <img
-                      src="assets/earthflix.jpg"
-                      alt="earthflix"
-                      class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 hover:scale-105"
-                    />
+                  Featured Project
+                </p>
+                <div class="flex flex-wrap items-center justify-between gap-3">
+                  <h3 class="text-2xl font-bold text-slate-900">TrillaVibes</h3>
+                  <div class="flex flex-wrap gap-2">
+                    <span
+                      class="tag-pill rounded-full px-3 py-1 text-xs font-semibold"
+                      >HTML</span
+                    >
+                    <span
+                      class="tag-pill rounded-full px-3 py-1 text-xs font-semibold"
+                      >CSS Keyframes</span
+                    >
+                    <span
+                      class="tag-pill rounded-full px-3 py-1 text-xs font-semibold"
+                      >JavaScript</span
+                    >
+                    <span
+                      class="tag-pill rounded-full px-3 py-1 text-xs font-semibold"
+                      >Nginx</span
+                    >
                   </div>
-                  <div class="p-6 flex-grow">
-                    <h3 class="text-2xl font-bold text-center mb-4">
-                      EarthFlix
-                    </h3>
-                    <div class="mb-4">
-                      <p class="text-gray-600">
-                        A Netflix-style streaming platform clone featuring a
-                        seamless user interface. Built with Next.js and
-                        TypeScript, pulling data from external endpoints to
-                        create an engaging browsing experience.
-                      </p>
-                    </div>
-                    <div class="flex flex-wrap gap-2 mb-4">
-                      <span
-                        class="px-2 py-0.5 bg-gray-800 text-white rounded-full text-xs"
-                        >HTML</span
-                      >
-                      <span
-                        class="px-2 py-0.5 bg-gray-800 text-white rounded-full text-xs"
-                        >CSS</span
-                      >
-                      <span
-                        class="px-2 py-0.5 bg-gray-800 text-white rounded-full text-xs"
-                        >Next.js</span
-                      >
-                      <span
-                        class="px-2 py-0.5 bg-gray-800 text-white rounded-full text-xs"
-                        >TypeScript</span
-                      >
-                      <span
-                        class="px-2 py-0.5 bg-gray-800 text-white rounded-full text-xs"
-                        >Vercel</span
-                      >
-                    </div>
-                  </div>
-                  <div
-                    class="px-4 sm:pr-6 py-4 bg-gray-50 flex flex-col sm:flex-row justify-center sm:justify-between gap-3 sm:gap-4"
+                </div>
+                <p class="text-base leading-7">
+                  A music production website built around mood, motion, and
+                  brand presence, using custom animation to make the experience
+                  feel alive without compromising clarity.
+                </p>
+                <ul class="space-y-2 text-sm leading-7">
+                  <li>
+                    Used atmospheric visuals and CSS keyframes to support the
+                    creative identity while keeping the layout direct.
+                  </li>
+                  <li>
+                    Deployed the site on an Nginx-backed setup, balancing a
+                    lightweight static build with production hosting details.
+                  </li>
+                </ul>
+                <div class="project-actions">
+                  <a
+                    href="https://amitrambaran.ca/trillavibes/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="project-link project-action project-action-primary"
                   >
-                    <a
-                      href="https://earthflix.vercel.app/"
-                      target="_blank"
-                      rel="noopener"
-                      class="inline-flex items-center justify-center px-3 sm:px-3 py-1.5 sm:py-1.5 bg-gray-50 text-[#EA580C] rounded border border-[#EA580C] hover:bg-[#EA580C] hover:text-white transition-colors text-sm font-bold"
-                    >
-                      <span class="mr-2">Demo</span>
-                      <i class="fas fa-external-link-alt"></i>
-                    </a>
-                    <a
-                      href="https://github.com/amitrambaran/earthflix"
-                      target="_blank"
-                      rel="noopener"
-                      class="inline-flex items-center justify-center px-3 sm:px-3 py-1.5 sm:py-1.5 bg-gray-50 text-[#EA580C] rounded border border-[#EA580C] hover:bg-[#EA580C] hover:text-white transition-colors text-sm font-bold"
-                    >
-                      <span class="mr-2">GitHub</span>
-                      <i class="fab fa-github"></i>
-                    </a>
-                  </div>
+                    <span>Open Live Site</span>
+                  </a>
+                  <a
+                    href="https://github.com/amitrambaran/trillavibes"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="project-link project-action project-action-secondary"
+                  >
+                    <span>GitHub</span>
+                  </a>
                 </div>
               </div>
+            </article>
+          </div>
 
-              <div class="w-full">
-                <div
-                  class="bg-white rounded-lg shadow-xl overflow-hidden h-full flex flex-col transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl"
-                >
-                  <div class="relative pb-[75%] overflow-hidden">
-                    <img
-                      src="assets/trillavibes.png"
-                      alt="trillavibes"
-                      class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 hover:scale-105"
-                    />
-                  </div>
-                  <div class="p-6 flex-grow">
-                    <h3 class="text-2xl font-bold text-center mb-4">
-                      TrillaVibes
-                    </h3>
-                    <div class="mb-4">
-                      <p class="text-gray-600">
-                        A static music production website with custom CSS
-                        animations deployed and hosted on an NginX instance.
-                      </p>
-                    </div>
-                    <div class="flex flex-wrap gap-2 mb-4">
-                      <span
-                        class="px-2 py-0.5 bg-gray-800 text-white rounded-full text-xs"
-                        >HTML</span
-                      >
-                      <span
-                        class="px-2 py-0.5 bg-gray-800 text-white rounded-full text-xs"
-                        >CSS Keyframes</span
-                      >
-                      <span
-                        class="px-2 py-0.5 bg-gray-800 text-white rounded-full text-xs"
-                        >JavaScript</span
-                      >
-                      <span
-                        class="px-2 py-0.5 bg-gray-800 text-white rounded-full text-xs"
-                        >Vultr</span
-                      >
-                      <span
-                        class="px-2 py-0.5 bg-gray-800 text-white rounded-full text-xs"
-                        >NginX</span
-                      >
-                      <span
-                        class="px-2 py-0.5 bg-gray-800 text-white rounded-full text-xs"
-                        >CertBot</span
-                      >
-                    </div>
-                  </div>
-                  <div
-                    class="px-4 sm:pr-6 py-4 bg-gray-50 flex flex-col sm:flex-row justify-center sm:justify-between gap-3 sm:gap-4"
+          <div class="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+            <article class="project-card rounded-3xl p-5">
+              <div class="aspect-[4/3] overflow-hidden rounded-2xl">
+                <img
+                  src="assets/earthflix.jpg"
+                  alt="Preview of the EarthFlix streaming app interface"
+                  loading="lazy"
+                  decoding="async"
+                  width="660"
+                  height="371"
+                  class="h-full w-full object-cover transition duration-500"
+                />
+              </div>
+              <div class="mt-5 space-y-3">
+                <h3 class="text-xl font-bold text-slate-900">EarthFlix</h3>
+                <p class="text-sm leading-7">
+                  A streaming-style interface built to feel familiar from the
+                  first interaction while keeping browsing patterns clean and
+                  recognizable.
+                </p>
+                <p class="text-sm leading-7">
+                  The project combines external content, TypeScript, and Next.js
+                  to create a sturdier, more maintainable frontend.
+                </p>
+                <div class="flex flex-wrap gap-2">
+                  <span
+                    class="tag-pill rounded-full px-3 py-1 text-xs font-semibold"
+                    >Next.js</span
                   >
-                    <a
-                      href="https://amitrambaran.ca/trillavibes/"
-                      target="_blank"
-                      rel="noopener"
-                      class="inline-flex items-center justify-center px-3 sm:px-3 py-1.5 sm:py-1.5 bg-gray-50 text-[#EA580C] rounded border border-[#EA580C] hover:bg-[#EA580C] hover:text-white transition-colors text-sm font-bold"
-                    >
-                      <span class="mr-2">Demo</span>
-                      <i class="fas fa-external-link-alt"></i>
-                    </a>
-                    <a
-                      href="https://github.com/amitrambaran/trillavibes"
-                      target="_blank"
-                      rel="noopener"
-                      class="inline-flex items-center justify-center px-3 sm:px-3 py-1.5 sm:py-1.5 bg-gray-50 text-[#EA580C] rounded border border-[#EA580C] hover:bg-[#EA580C] hover:text-white transition-colors text-sm font-bold"
-                    >
-                      <span class="mr-2">GitHub</span>
-                      <i class="fab fa-github"></i>
-                    </a>
-                  </div>
+                  <span
+                    class="tag-pill rounded-full px-3 py-1 text-xs font-semibold"
+                    >TypeScript</span
+                  >
+                  <span
+                    class="tag-pill rounded-full px-3 py-1 text-xs font-semibold"
+                    >Vercel</span
+                  >
+                  <span
+                    class="tag-pill rounded-full px-3 py-1 text-xs font-semibold"
+                    >API Data</span
+                  >
+                </div>
+                <div class="project-actions">
+                  <a
+                    href="https://earthflix.vercel.app/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="project-link project-action project-action-primary"
+                  >
+                    <span>Demo</span>
+                  </a>
+                  <a
+                    href="https://github.com/amitrambaran/earthflix"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="project-link project-action project-action-secondary"
+                  >
+                    <span>GitHub</span>
+                  </a>
                 </div>
               </div>
+            </article>
 
-              <div class="w-full">
-                <div
-                  class="bg-white rounded-lg shadow-xl overflow-hidden h-full flex flex-col transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl"
-                >
-                  <div class="relative pb-[75%] overflow-hidden">
-                    <img
-                      src="assets/picmi.jpg"
-                      alt="picmi"
-                      class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 hover:scale-105"
-                    />
-                  </div>
-                  <div class="p-6 flex-grow">
-                    <h3 class="text-2xl font-bold text-center mb-4">PicMi</h3>
-                    <div class="mb-4">
-                      <p class="text-gray-600">
-                        A React-based image search application that leverages
-                        the Unsplash API to help users discover and browse
-                        high-quality photos.
-                      </p>
-                    </div>
-                    <div class="flex flex-wrap gap-2 mb-4">
-                      <span
-                        class="px-2 py-0.5 bg-gray-800 text-white rounded-full text-xs"
-                        >HTML</span
-                      >
-                      <span
-                        class="px-2 py-0.5 bg-gray-800 text-white rounded-full text-xs"
-                        >CSS</span
-                      >
-                      <span
-                        class="px-2 py-0.5 bg-gray-800 text-white rounded-full text-xs"
-                        >JavaScript</span
-                      >
-                      <span
-                        class="px-2 py-0.5 bg-gray-800 text-white rounded-full text-xs"
-                        >React</span
-                      >
-                      <span
-                        class="px-2 py-0.5 bg-gray-800 text-white rounded-full text-xs"
-                        >Unsplash API</span
-                      >
-                    </div>
-                  </div>
-                  <div
-                    class="px-4 sm:pr-6 py-4 bg-gray-50 flex flex-col sm:flex-row justify-center sm:justify-between gap-3 sm:gap-4"
+            <article class="project-card rounded-3xl p-5">
+              <div class="aspect-[4/3] overflow-hidden rounded-2xl">
+                <img
+                  src="assets/picmi.jpg"
+                  alt="Preview of the PicMi image search app"
+                  loading="lazy"
+                  decoding="async"
+                  width="3840"
+                  height="2160"
+                  class="h-full w-full object-cover transition duration-500"
+                />
+              </div>
+              <div class="mt-5 space-y-3">
+                <h3 class="text-xl font-bold text-slate-900">PicMi</h3>
+                <p class="text-sm leading-7">
+                  An image discovery app built around search speed and simple,
+                  repeatable browsing patterns.
+                </p>
+                <p class="text-sm leading-7">
+                  The project centers on API integration, responsive results,
+                  and keeping the interface out of the user&apos;s way.
+                </p>
+                <div class="flex flex-wrap gap-2">
+                  <span
+                    class="tag-pill rounded-full px-3 py-1 text-xs font-semibold"
+                    >React</span
                   >
-                    <a
-                      href="https://picmi.netlify.app/"
-                      target="_blank"
-                      rel="noopener"
-                      class="inline-flex items-center justify-center px-3 sm:px-3 py-1.5 sm:py-1.5 bg-gray-50 text-[#EA580C] rounded border border-[#EA580C] hover:bg-[#EA580C] hover:text-white transition-colors text-sm font-bold"
-                    >
-                      <span class="mr-2">Demo</span>
-                      <i class="fas fa-external-link-alt"></i>
-                    </a>
-                    <a
-                      href="https://github.com/amitrambaran/picture-search"
-                      target="_blank"
-                      rel="noopener"
-                      class="inline-flex items-center justify-center px-3 sm:px-3 py-1.5 sm:py-1.5 bg-gray-50 text-[#EA580C] rounded border border-[#EA580C] hover:bg-[#EA580C] hover:text-white transition-colors text-sm font-bold"
-                    >
-                      <span class="mr-2">GitHub</span>
-                      <i class="fab fa-github"></i>
-                    </a>
-                  </div>
+                  <span
+                    class="tag-pill rounded-full px-3 py-1 text-xs font-semibold"
+                    >JavaScript</span
+                  >
+                  <span
+                    class="tag-pill rounded-full px-3 py-1 text-xs font-semibold"
+                    >Unsplash API</span
+                  >
+                </div>
+                <div class="project-actions">
+                  <a
+                    href="https://picmi.netlify.app/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="project-link project-action project-action-primary"
+                  >
+                    <span>Demo</span>
+                  </a>
+                  <a
+                    href="https://github.com/amitrambaran/picture-search"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="project-link project-action project-action-secondary"
+                  >
+                    <span>GitHub</span>
+                  </a>
                 </div>
               </div>
+            </article>
 
-              <div class="w-full">
-                <div
-                  class="bg-white rounded-lg shadow-xl overflow-hidden h-full flex flex-col transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl"
-                >
-                  <div class="relative pb-[75%] overflow-hidden">
-                    <img
-                      src="assets/acme-locations.jpg"
-                      alt="acme locations"
-                      class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 hover:scale-105"
-                    />
-                  </div>
-                  <div class="p-6 flex-grow">
-                    <h3 class="text-2xl font-bold text-center mb-4">
-                      Acme Locations
-                    </h3>
-                    <div class="mb-4">
-                      <p class="text-gray-600">
-                        A React web app that pulls data from an external API and
-                        displays info within interactive and functional card
-                        components.
-                      </p>
-                    </div>
-                    <div class="flex flex-wrap gap-2 mb-4">
-                      <span
-                        class="px-2 py-0.5 bg-gray-800 text-white rounded-full text-xs"
-                        >HTML</span
-                      >
-                      <span
-                        class="px-2 py-0.5 bg-gray-800 text-white rounded-full text-xs"
-                        >CSS</span
-                      >
-                      <span
-                        class="px-2 py-0.5 bg-gray-800 text-white rounded-full text-xs"
-                        >JavaScript</span
-                      >
-                      <span
-                        class="px-2 py-0.5 bg-gray-800 text-white rounded-full text-xs"
-                        >React</span
-                      >
-                      <span
-                        class="px-2 py-0.5 bg-gray-800 text-white rounded-full text-xs"
-                        >Axios</span
-                      >
-                      <span
-                        class="px-2 py-0.5 bg-gray-800 text-white rounded-full text-xs"
-                        >Moment.js</span
-                      >
-                      <span
-                        class="px-2 py-0.5 bg-gray-800 text-white rounded-full text-xs"
-                        >Styled components</span
-                      >
-                    </div>
-                  </div>
-                  <div
-                    class="px-4 sm:pr-6 py-4 bg-gray-50 flex flex-col sm:flex-row justify-center sm:justify-between gap-3 sm:gap-4"
+            <article class="project-card rounded-3xl p-5">
+              <div class="aspect-[4/3] overflow-hidden rounded-2xl">
+                <img
+                  src="assets/acme-locations.jpg"
+                  alt="Preview of the Acme Locations app"
+                  loading="lazy"
+                  decoding="async"
+                  width="660"
+                  height="495"
+                  class="h-full w-full object-cover transition duration-500"
+                />
+              </div>
+              <div class="mt-5 space-y-3">
+                <h3 class="text-xl font-bold text-slate-900">Acme Locations</h3>
+                <p class="text-sm leading-7">
+                  A React app that turns API data into useful, scannable cards
+                  instead of dumping raw information on the page.
+                </p>
+                <p class="text-sm leading-7">
+                  The emphasis was on making fetched data feel structured and
+                  practical at the UI level.
+                </p>
+                <div class="flex flex-wrap gap-2">
+                  <span
+                    class="tag-pill rounded-full px-3 py-1 text-xs font-semibold"
+                    >React</span
                   >
-                    <a
-                      href="https://amitrambaran.ca/acme-locations/"
-                      target="_blank"
-                      rel="noopener"
-                      class="inline-flex items-center justify-center px-3 sm:px-3 py-1.5 sm:py-1.5 bg-gray-50 text-[#EA580C] rounded border border-[#EA580C] hover:bg-[#EA580C] hover:text-white transition-colors text-sm font-bold"
-                    >
-                      <span class="mr-2">Demo</span>
-                      <i class="fas fa-external-link-alt"></i>
-                    </a>
-                    <a
-                      href="https://github.com/amitrambaran/acme-locations"
-                      target="_blank"
-                      rel="noopener"
-                      class="inline-flex items-center justify-center px-3 sm:px-3 py-1.5 sm:py-1.5 bg-gray-50 text-[#EA580C] rounded border border-[#EA580C] hover:bg-[#EA580C] hover:text-white transition-colors text-sm font-bold"
-                    >
-                      <span class="mr-2">GitHub</span>
-                      <i class="fab fa-github"></i>
-                    </a>
-                  </div>
+                  <span
+                    class="tag-pill rounded-full px-3 py-1 text-xs font-semibold"
+                    >Axios</span
+                  >
+                  <span
+                    class="tag-pill rounded-full px-3 py-1 text-xs font-semibold"
+                    >Styled Components</span
+                  >
+                </div>
+                <div class="project-actions">
+                  <a
+                    href="https://amitrambaran.ca/acme-locations/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="project-link project-action project-action-primary"
+                  >
+                    <span>Demo</span>
+                  </a>
+                  <a
+                    href="https://github.com/amitrambaran/acme-locations"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="project-link project-action project-action-secondary"
+                  >
+                    <span>GitHub</span>
+                  </a>
                 </div>
               </div>
+            </article>
 
-              <div class="w-full">
-                <div
-                  class="bg-white rounded-lg shadow-xl overflow-hidden h-full flex flex-col transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl"
-                >
-                  <div class="relative pb-[75%] overflow-hidden">
-                    <img
-                      src="assets/weatherme.jpg"
-                      alt="weather app"
-                      class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 hover:scale-105"
-                    />
-                  </div>
-                  <div class="p-6 flex-grow">
-                    <h3 class="text-2xl font-bold text-center mb-4">
-                      WeatherMe
-                    </h3>
-                    <div class="mb-4">
-                      <p class="text-gray-600">
-                        A dynamic, responsive weather app that utilizes the
-                        OpenWeatherMap API to asynchronously display the current
-                        weather/five day forecast.
-                      </p>
-                    </div>
-                    <div class="flex flex-wrap gap-2 mb-4">
-                      <span
-                        class="px-2 py-0.5 bg-gray-800 text-white rounded-full text-xs"
-                        >HTML</span
-                      >
-                      <span
-                        class="px-2 py-0.5 bg-gray-800 text-white rounded-full text-xs"
-                        >CSS</span
-                      >
-                      <span
-                        class="px-2 py-0.5 bg-gray-800 text-white rounded-full text-xs"
-                        >JavaScript</span
-                      >
-                      <span
-                        class="px-2 py-0.5 bg-gray-800 text-white rounded-full text-xs"
-                        >AJAX</span
-                      >
-                      <span
-                        class="px-2 py-0.5 bg-gray-800 text-white rounded-full text-xs"
-                        >JSON</span
-                      >
-                      <span
-                        class="px-2 py-0.5 bg-gray-800 text-white rounded-full text-xs"
-                        >OpenWeatherMap API</span
-                      >
-                    </div>
-                  </div>
-                  <div
-                    class="px-4 sm:pr-6 py-4 bg-gray-50 flex flex-col sm:flex-row justify-center sm:justify-between gap-3 sm:gap-4"
+            <article class="project-card rounded-3xl p-5">
+              <div class="aspect-[4/3] overflow-hidden rounded-2xl">
+                <img
+                  src="assets/weatherme.jpg"
+                  alt="Preview of the WeatherMe weather app"
+                  loading="lazy"
+                  decoding="async"
+                  width="660"
+                  height="495"
+                  class="h-full w-full object-cover transition duration-500"
+                />
+              </div>
+              <div class="mt-5 space-y-3">
+                <h3 class="text-xl font-bold text-slate-900">WeatherMe</h3>
+                <p class="text-sm leading-7">
+                  A responsive weather app that turns forecast data into a quick
+                  daily utility rather than a cluttered dashboard.
+                </p>
+                <p class="text-sm leading-7">
+                  It highlights asynchronous API work, straightforward
+                  interaction design, and compact mobile-friendly presentation.
+                </p>
+                <div class="flex flex-wrap gap-2">
+                  <span
+                    class="tag-pill rounded-full px-3 py-1 text-xs font-semibold"
+                    >JavaScript</span
                   >
-                    <a
-                      href="https://amitrambaran.ca/weather-app/"
-                      target="_blank"
-                      rel="noopener"
-                      class="inline-flex items-center justify-center px-3 sm:px-3 py-1.5 sm:py-1.5 bg-gray-50 text-[#EA580C] rounded border border-[#EA580C] hover:bg-[#EA580C] hover:text-white transition-colors text-sm font-bold"
-                    >
-                      <span class="mr-2">Demo</span>
-                      <i class="fas fa-external-link-alt"></i>
-                    </a>
-                    <a
-                      href="https://github.com/amitrambaran/weather-app"
-                      target="_blank"
-                      rel="noopener"
-                      class="inline-flex items-center justify-center px-3 sm:px-3 py-1.5 sm:py-1.5 bg-gray-50 text-[#EA580C] rounded border border-[#EA580C] hover:bg-[#EA580C] hover:text-white transition-colors text-sm font-bold"
-                    >
-                      <span class="mr-2">GitHub</span>
-                      <i class="fab fa-github"></i>
-                    </a>
-                  </div>
+                  <span
+                    class="tag-pill rounded-full px-3 py-1 text-xs font-semibold"
+                    >AJAX</span
+                  >
+                  <span
+                    class="tag-pill rounded-full px-3 py-1 text-xs font-semibold"
+                    >OpenWeatherMap API</span
+                  >
                 </div>
+                <div class="project-actions">
+                  <a
+                    href="https://amitrambaran.ca/weather-app/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="project-link project-action project-action-primary"
+                  >
+                    <span>Demo</span>
+                  </a>
+                  <a
+                    href="https://github.com/amitrambaran/weather-app"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="project-link project-action project-action-secondary"
+                  >
+                    <span>GitHub</span>
+                  </a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="px-4 pb-20 sm:px-6">
+        <div class="mx-auto max-w-6xl">
+          <div class="content-panel rounded-3xl p-8 sm:p-10">
+            <p
+              class="text-sm font-bold uppercase tracking-[0.16em] text-[var(--accent-strong)]"
+            >
+              Contact
+            </p>
+            <div
+              class="mt-4 grid gap-6 lg:grid-cols-[minmax(0,1.2fr)_minmax(260px,0.8fr)] lg:items-end"
+            >
+              <div>
+                <h2 class="section-title text-3xl font-bold sm:text-4xl">
+                  Need a frontend developer who cares about the details after
+                  launch?
+                </h2>
+                <p class="section-copy mt-4 max-w-2xl text-base leading-8">
+                  I am open to frontend roles at companies where the product
+                  needs to feel fast, look sharp, and make the next click
+                  obvious.
+                </p>
+              </div>
+              <div class="flex flex-wrap gap-3 lg:justify-end">
+                <a
+                  href="mailto:amit.rambaran@gmail.com?subject=Frontend%20Role%20Inquiry"
+                  class="button-link cta-solid rounded-full px-6 py-3 text-sm font-semibold transition"
+                  >Email Amit</a
+                >
+                <a
+                  href="assets/amit-rambaran-resume.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="button-link cta-outline-ink rounded-full px-6 py-3 text-sm font-semibold transition"
+                  >View Resume</a
+                >
               </div>
             </div>
           </div>
         </div>
+      </section>
+    </main>
+
+    <footer
+      class="border-t border-[rgba(112,138,123,0.26)] bg-[var(--accent-deep)] px-4 py-10 text-white sm:px-6"
+    >
+      <div
+        class="mx-auto flex max-w-6xl flex-col gap-6 sm:flex-row sm:items-center sm:justify-between"
+      >
+        <div>
+          <p
+            class="text-sm font-bold uppercase tracking-[0.16em] text-green-100"
+          >
+            Contact
+          </p>
+          <a
+            href="mailto:amit.rambaran@gmail.com"
+            class="mt-3 inline-flex text-lg font-semibold text-white transition hover:text-green-50"
+            >amit.rambaran@gmail.com</a
+          >
+          <p class="mt-2 text-sm text-green-50/72">
+            Frontend developer portfolio focused on thoughtful, user-facing web
+            work.
+          </p>
+        </div>
+
+        <div class="flex items-center gap-3">
+          <a
+            href="https://github.com/amitrambaran"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Visit Amit Rambaran on GitHub"
+            class="icon-link inline-flex h-11 w-11 items-center justify-center text-white transition"
+          >
+            <span class="footer-badge" aria-hidden="true">
+              <svg viewBox="0 0 24 24" class="icon-svg">
+                <path
+                  d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.2 11.38.6.11.82-.26.82-.58 0-.29-.01-1.04-.02-2.05-3.34.73-4.04-1.61-4.04-1.61-.55-1.38-1.33-1.75-1.33-1.75-1.09-.74.08-.73.08-.73 1.2.08 1.84 1.24 1.84 1.24 1.08 1.84 2.82 1.31 3.5 1 .11-.78.42-1.31.76-1.61-2.67-.3-5.48-1.33-5.48-5.93 0-1.31.47-2.38 1.24-3.22-.12-.31-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23A11.5 11.5 0 0 1 12 6.8c1.02 0 2.05.14 3.01.41 2.29-1.55 3.29-1.23 3.29-1.23.66 1.66.25 2.87.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.62-5.49 5.92.43.37.81 1.1.81 2.22 0 1.61-.01 2.91-.01 3.31 0 .32.22.7.82.58A12.01 12.01 0 0 0 24 12c0-6.63-5.37-12-12-12Z"
+                />
+              </svg>
+            </span>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/amitrambaran"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Visit Amit Rambaran on LinkedIn"
+            class="icon-link inline-flex h-11 w-11 items-center justify-center text-white transition"
+          >
+            <span class="footer-badge" aria-hidden="true">
+              <svg viewBox="0 0 24 24" class="icon-svg">
+                <path
+                  d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.05-1.86-3.05-1.87 0-2.16 1.46-2.16 2.96v5.66H9.31V9h3.42v1.56h.05c.48-.9 1.64-1.86 3.37-1.86 3.6 0 4.27 2.37 4.27 5.45v6.3ZM5.29 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14ZM7.07 20.45H3.5V9h3.57v11.45ZM22.22 0H1.77C.8 0 0 .77 0 1.72v20.56C0 23.23.8 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0Z"
+                />
+              </svg>
+            </span>
+          </a>
+          <a
+            href="mailto:amit.rambaran@gmail.com"
+            aria-label="Send an email to Amit Rambaran"
+            class="icon-link inline-flex h-11 w-11 items-center justify-center text-white transition"
+          >
+            <span class="footer-badge" aria-hidden="true">
+              <svg viewBox="0 0 24 24" class="icon-svg">
+                <path
+                  d="M2.25 5.5A2.25 2.25 0 0 1 4.5 3.25h15A2.25 2.25 0 0 1 21.75 5.5v13A2.25 2.25 0 0 1 19.5 20.75h-15A2.25 2.25 0 0 1 2.25 18.5v-13Zm1.8.42 7.38 5.62a.93.93 0 0 0 1.14 0l7.38-5.62a.75.75 0 0 0-.45-.17h-15a.75.75 0 0 0-.45.17ZM20.25 7.4l-6.77 5.16a2.43 2.43 0 0 1-2.96 0L3.75 7.4v11.1c0 .41.34.75.75.75h15c.41 0 .75-.34.75-.75V7.4Z"
+                />
+              </svg>
+            </span>
+          </a>
+        </div>
       </div>
 
-      <footer class="bg-gray-800 text-white py-8 mt-auto">
-        <div class="container mx-auto px-4 text-center">
-          <div class="mb-4 flex justify-center space-x-4">
-            <a
-              href="https://github.com/amitrambaran"
-              target="_blank"
-              rel="noopener"
-              class="text-white hover:text-[#EA580C] transition-colors duration-200"
-            >
-              <i class="fab fa-github text-xl"></i>
-            </a>
-            <a
-              href="https://www.linkedin.com/in/amitrambaran"
-              target="_blank"
-              rel="noopener"
-              class="text-white hover:text-[#EA580C] transition-colors duration-200"
-            >
-              <i class="fab fa-linkedin text-xl"></i>
-            </a>
-            <a
-              href="mailto:amit.rambaran@gmail.com"
-              target="_blank"
-              rel="noopener"
-              class="text-white hover:text-[#EA580C] transition-colors duration-200"
-            >
-              <i class="fas fa-envelope text-xl"></i>
-            </a>
-          </div>
-          <strong class="text-sm font-bold">amit.rambaran@gmail.com</strong
-          ><br />
-          <span class="text-sm text-white"
-            >&copy; <span id="year"></span> Amit Rambaran</span
-          >
-        </div>
-      </footer>
-    </div>
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        new Typed("#typed-name", {
-          strings: [
-            '<span class="text-[#EA580C]">A</span>mit <span class="text-[#EA580C]">R</span>ambaran',
-          ],
-          typeSpeed: 40,
-          showCursor: false,
-          cursorChar: "|",
-          onComplete: function () {
-            new Typed("#typed-description", {
-              strings: [
-                "Frontend Developer with a passion for clean and functional user experiences.",
-              ],
-              typeSpeed: 60,
-              showCursor: true,
-            });
-          },
-        });
-      });
+      <div
+        class="mx-auto mt-6 max-w-6xl border-t border-white/12 pt-6 text-sm text-green-50/72"
+      >
+        &copy; <span id="year"></span> Amit Rambaran
+      </div>
+    </footer>
 
-      function updateFooterContent() {
-        const footerContent = document.getElementById("year");
-        const currentYear = new Date().getFullYear();
-        footerContent.innerHTML = currentYear;
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+
+      const mobileMenuButton = document.getElementById("mobile-menu-button");
+      const mobileMenu = document.getElementById("mobile-menu");
+
+      if (mobileMenuButton && mobileMenu) {
+        const closeMobileMenu = function () {
+          mobileMenu.classList.add("hidden");
+          mobileMenuButton.setAttribute("aria-expanded", "false");
+          mobileMenuButton.setAttribute("aria-label", "Open navigation menu");
+        };
+
+        const openMobileMenu = function () {
+          mobileMenu.classList.remove("hidden");
+          mobileMenuButton.setAttribute("aria-expanded", "true");
+          mobileMenuButton.setAttribute("aria-label", "Close navigation menu");
+        };
+
+        mobileMenuButton.addEventListener("click", function () {
+          const isExpanded =
+            mobileMenuButton.getAttribute("aria-expanded") === "true";
+
+          if (isExpanded) {
+            closeMobileMenu();
+          } else {
+            openMobileMenu();
+          }
+        });
+
+        mobileMenu.querySelectorAll("a").forEach(function (link) {
+          link.addEventListener("click", closeMobileMenu);
+        });
+
+        window.addEventListener("resize", function () {
+          if (window.innerWidth >= 640) {
+            closeMobileMenu();
+          }
+        });
       }
-      updateFooterContent();
+
+      window.addEventListener("load", function () {
+        const loadAnalytics = function () {
+          const script = document.createElement("script");
+          script.async = true;
+          script.src =
+            "https://www.googletagmanager.com/gtag/js?id=G-PLQCQCMT04";
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          window.gtag = function () {
+            dataLayer.push(arguments);
+          };
+
+          gtag("js", new Date());
+          gtag("config", "G-PLQCQCMT04");
+        };
+
+        if ("requestIdleCallback" in window) {
+          requestIdleCallback(loadAnalytics, { timeout: 3000 });
+        } else {
+          setTimeout(loadAnalytics, 1500);
+        }
+      });
     </script>
     <script
       defer=""
