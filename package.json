@@ -4,11 +4,8 @@
   "scripts": {
     "build:css": "tailwindcss -i ./src/tailwind.css -o ./css/tailwind.css --minify"
   },
-  "dependencies": {
+  "devDependencies": {
     "@tailwindcss/cli": "^4.2.4",
     "tailwindcss": "^4.2.4"
-  },
-  "devDependencies": {
-    "lighthouse": "^13.1.0"
   }
 }
