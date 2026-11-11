@@ -150,10 +150,6 @@ a {
     linear-gradient(180deg, rgba(240, 247, 237, 0.98), rgba(255, 255, 255, 0.97));
 }
 
-.project-kicker {
-  color: var(--accent-strong);
-}
-
 .project-card p,
 .project-card li {
   color: #586b60;
